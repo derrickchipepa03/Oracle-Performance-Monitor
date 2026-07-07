@@ -166,13 +166,12 @@ img {
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
     display: flex;
-    align-items: center;
+    text-align:center;
     cursor: pointer;
     text-decoration: none;
     font-size: 1.5rem;
     position:fixed;
-    right: 1px;
-    
+    margin-right: 1rem;
 }
 .navbar1 {
     background:#f77062;  
@@ -184,4 +183,12 @@ img {
     position: sticky;
     top: 0;
     z-index: 999;
+}
+
+.featured-projects {
+    background: #111827;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 8px;
+    margin: 50px 0 20px 0;
 }
