@@ -2,86 +2,165 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="Oracle, SQL, Python, Automation, Software">
-    <meta name="description" content="Operational Intelligence Platform - Business automation and Oracle monitoring tools.">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+    <meta
+        name="keywords"
+        content="Oracle, SQL, Python, Automation, Software"
+    >
+    <meta
+        name="description"
+        content="Operational Intelligence Platform - Business automation and Oracle monitoring tools."
+    >
+
     <title>Operational Intelligence Platform</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
-
-    <!-- Navigation -->
     <nav class="navbar">
         <div class="navbar__container">
             <a href="index.html" id="navbar__logo">
                 Operational Intelligence Platform
             </a>
-            <div class="navbar__toggle" id="mobile-menu">
+
+            <button
+                class="navbar__toggle"
+                id="mobile-menu"
+                type="button"
+                aria-label="Open navigation menu"
+            >
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
-            </div>
+            </button>
+
             <ul class="navbar__menu">
                 <li class="navbar__item">
                     <a href="projects.html" class="navbar__links">
                         Projects
                     </a>
                 </li>
+
                 <li class="navbar__item">
                     <a href="tools.html" class="navbar__links">
                         Tools
                     </a>
                 </li>
+
                 <li class="navbar__item">
                     <a href="contact.html" class="navbar__links">
                         Contact
                     </a>
                 </li>
+
                 <li class="navbar__btn">
-                    <a href="#" class="button">
+                    <a href="#featured-products" class="button">
                         Learn More
                     </a>
                 </li>
             </ul>
         </div>
     </nav>
+    
+    <main>
+        <section class="hero">
+            <div class="section-container">
+                <h1>Business Software & Automation</h1>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <h1>Business Software & Automation</h1>
-        <p>
-            Helping businesses automate database administration,
-            reporting and operational tasks through custom software.
-        </p>
-    </section>
+                <p>
+                    Helping businesses automate database administration,
+                    reporting and operational tasks through custom software.
+                </p>
+            </div>
+        </section>
 
-    <!-- Featured Projects -->
-    <section class="featured-projects">
-        <h2>Featured Projects</h2>
-        <div class="project-grid">
-            <div class="project-card">
-                <h3>Oracle Performance Monitor</h3>
+        <section
+            class="featured-products"
+            id="featured-products"
+        >
+            <div class="section-container">
+                <h2 class="featured-products__header">
+                    Featured Projects
+                </h2>
+
+                <div class="project-grid">
+                    <article class="project-card oracle">
+                        <h3>Enterprise Performance Monitor</h3>
+                        <p>
+                            Monitor tablespaces, blocking sessions,
+                            SQL performance and database health.
+                        </p>
+                    </article>
+
+                    <article class="project-card sql">
+                        <h3>SQL Automation Toolkit</h3>
+                        <p>
+                            Automate common DBA maintenance
+                            and reporting tasks.
+                        </p>
+                    </article>
+
+                    <article class="project-card linux">
+                        <h3>Linux Server Monitor</h3>
+                        <p>
+                            Monitor CPU, memory, storage and
+                            database services.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="about">
+            <div class="section-container">
+                <h2>About Me</h2>
+
                 <p>
-                    Monitor tablespaces, blocking sessions,
-                    SQL performance and database health.
+                    I develop software solutions that streamline business
+                    operations and reduce repetitive database and reporting
+                    tasks.
                 </p>
             </div>
-            <div class="project-card">
-                <h3>SQL Automation Toolkit</h3>
+        </section>
+
+        <section class="technologies">
+            <div class="section-container">
+                <h2>Technologies</h2>
+
+                <ul class="tech-list">
+                    <li>Python</li>
+                    <li>SQL</li>
+                    <li>Oracle</li>
+                    <li>Linux</li>
+                    <li>HTML and CSS</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="contact">
+            <div class="section-container">
+                <h2>Contact</h2>
+
                 <p>
-                    Automate common Oracle DBA maintenance
-                    and reporting tasks.
+                    For enquiries, email
+                    <a href="mailto:info@yourcompany.com">
+                        dchipepa@gmail.com
+                    </a>
                 </p>
             </div>
-            <div class="project-card">
-                <h3>Linux Server Monitor</h3>
-                <p>
-                    Monitor CPU, memory, storage and
-                    database services.
-                </p>
-            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="section-container">
+            <p>
+                © 2026 Operational Intelligence Platform.
+                All rights reserved.
+            </p>
         </div>
-    </section>
+    </footer>
 </body>
 </html>
