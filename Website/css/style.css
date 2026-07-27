@@ -11,6 +11,7 @@ body {
     line-height: 1.6;
 }
 
+/* section containers */
 .section-container {
     width: min(1200px, 90%);
     margin: 0 auto;
@@ -51,7 +52,6 @@ body {
 }
 
 /* Navigation */
-
 .navbar {
     position: sticky;
     top: 0;
@@ -126,7 +126,6 @@ body {
 }
 
 /* Hero */
-
 .hero {
     padding: 50px 0;
     text-align: center;
@@ -144,7 +143,6 @@ body {
 }
 
 /* Featured projects */
-
 .featured-products {
     padding: 40px 0;
     background: #f4f4f4;
@@ -222,8 +220,7 @@ body {
     margin-left: 700px;
 }
 
-/* Remaining sections */
-
+/* what i build */
 .what-i-build {
     padding: 0px 0;
     background: black;
@@ -231,18 +228,6 @@ body {
     text-align: center;
     color: white;
     margin-bottom: 0px;
-}
-.tools {
-    padding: 70px 0;
-    background: white;
-    margin-top: 0px;
-}
-
-.contact {
-    padding: 70px 0;
-    background: #f4f4f4;
-    margin-top: 0px;
-    text-align: center;
 }
 
 .what-i-build h2 {
@@ -252,30 +237,11 @@ body {
     padding: 10px;
 }
 
-.tools h2,
-.contact h2 {
-    margin-bottom: 20px;
-    text-align: center;
-    font-size: 2.2rem;
-}
-
-.section-container0 {
-    width: min(1200px, 90%);
-    margin: 0 auto;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: -200px;
-}
-
 .build-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 40px;
-    margin-left: 50px;
-}
-
-.project-card {
-    
+    margin-left: 10px;
 }
 
 .build-grid article {
@@ -287,6 +253,19 @@ body {
     color: #ff7062;
 }
 
+/* tools */
+.tools {
+    padding: 70px 0;
+    background: white;
+    margin-top: 0px;
+}
+
+.tools h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 2.2rem;
+}
+
 .tools-list {
     display: flex;
     flex-wrap: wrap;
@@ -295,6 +274,21 @@ body {
     margin-left: 420px;
 }
 
+/* contact */
+.contact {
+    padding: 70px 0;
+    background: #f4f4f4;
+    margin-top: 0px;
+    text-align: center;
+}
+
+.contact h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 2.2rem;
+}
+
+/* footer */
 .footer {
     padding: 30px 0;
     background: #131313;
@@ -302,10 +296,7 @@ body {
     text-align: center;
 }
 
-.hidden {
-    display: none;
-}
-
+/* modal */
 .modal-overlay {
     position: fixed;
     inset: 0;
@@ -359,8 +350,12 @@ body {
     display: inline-block;
     margin-top: 25px;
 }
-/* Mobile */
 
+.hidden {
+    display: none;
+}
+
+/* Mobile */
 @media screen and (max-width: 960px) {
     .navbar {
         height: auto;
