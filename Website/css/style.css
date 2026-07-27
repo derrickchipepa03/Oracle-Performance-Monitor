@@ -35,20 +35,20 @@ body {
     justify-content: center;
     padding: 10px 20px;
     border-radius: 4px;
-    background: #ff7062;
     color: #ffffff;
     text-decoration: none;
 }
 
-.link1 {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 20px;
-    border-radius: 4px;
+.link--projects {
+    background: #ff7062;
+}
+
+.link--tools {
     background: black;
-    color: #ffffff;
-    text-decoration: none; 
+}
+
+.link:hover {
+    transform: translateY(10000px);
 }
 
 /* Navigation */
@@ -266,12 +266,11 @@ body {
     font-size: 2.2rem;
 }
 
-.tools-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    list-style: none;
-    margin-left: 420px;
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    margin-left: 10px;
 }
 
 /* contact */
