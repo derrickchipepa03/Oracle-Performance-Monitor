@@ -113,3 +113,5 @@ document.addEventListener("keydown", (event) => {
         closeModal;
     }
 });
+
+lucide.createIcons();
