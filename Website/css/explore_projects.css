@@ -1,0 +1,57 @@
+.elink {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+
+    border: none;
+    background: transparent;
+
+    color: #ff7062;
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+    transform: translate(-20px, 5px);
+}
+
+.elink1 {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+
+    border: none;
+    background: transparent;
+
+    color: #ff7062;
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+    transform: translate(-20px, 35px);
+}
+
+.elink2 {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+
+    border: none;
+    background: transparent;
+
+    color: #ff7062;
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+    transform: translate(-20px, 35px);
+}
+
+
+
+
