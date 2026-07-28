@@ -22,39 +22,9 @@ body {
     margin: 0 auto;
 }
 
-.section-container0 {
-    width: min(1200px, 90%);
-    margin: 0 auto;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: -200px;
-}
 .section-container1 {
     width: min(1200px, 90%);
     margin: 0 auto;
-}
-
-.link {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 20px;
-    border-radius: 4px;
-    color: #ffffff;
-    text-decoration: none;
-    transform: translateY(10px);
-}
-
-.link--projects {
-    background: #ff7062;
-}
-
-.link--tools {
-    background: black;
-}
-
-.link:hover {
-    background: #4837ff;
 }
 
 /* Navigation */
@@ -134,18 +104,91 @@ body {
 /* Hero */
 .hero {
     padding: 50px 0;
-    text-align: center;
+    background: #ffffff;
 }
 
-.hero h1 {
-    margin-bottom: 16px;
-    font-size: clamp(1.2rem, 3vw, 2rem);
-}
-
-.hero p {
-    max-width: 700px;
+.hero-container {
+    width: min(1200px, 90%);
     margin: 0 auto;
-    font-size: 1.1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 60px;
+}
+
+.hero-left {
+    text-align: left;
+}
+
+.hero-left h1 {
+    margin-bottom: 16px;
+    font-size: clamp(2rem, 4vw, 1rem);
+    line-height: 1.1;
+}
+
+.hero-left p {
+    max-width: 550px;
+    font-size: 1rem;
+}
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.languages {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: #555555;
+    font-size: 0.9rem;
+}
+ 
+ .built-with {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 28px;
+  }
+
+  .built-with__label {
+    color: #555555;
+    font-size: 0.9rem;
+}
+ 
+  .link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    color: #ffffff;
+    cursor: pointer;
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+.link--projects {
+    background: #ff7062;
+}
+
+.link--tools {
+    background: black;
+}
+
+.link:hover {
+    transform: translateY(-3px);
+}
+
+.block {
+    width: 110%;
+    height: 220px;
+    border-radius: 14px;
+    background: #131313;
 }
 
 /* Featured projects */
@@ -159,6 +202,16 @@ body {
     text-align: center;
     font-size: 2rem;
     transform: translateY(-20px);
+}
+
+.featured-products__header::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 3px;
+    margin: 8px auto 0;
+    background: #ff7062;
+    border-radius: 10px;
 }
 
 .project-grid {
@@ -214,14 +267,6 @@ body {
     margin-left: 700px;
 }
 
-.languages {
-   display: grid;
-    grid-template-columns: repeat(100, 1fr);
-    gap: 40px;
-    margin-left: 200px;
-    transform: translateY(10px);
-}
-
 /* what i build */
 .what-i-build {
     padding: 10px 0;
@@ -243,11 +288,22 @@ body {
     transform: translateY(10px);
 }
 
+.what-i-build h2::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 3px;
+    margin: 8px auto 0;
+    background: #ff7062;
+    border-radius: 10px;
+}
+
 .build-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 0px;
     margin-left: 10px;
+    margin-bottom: 25px;
 }
 
 .build-grid article {
@@ -261,19 +317,19 @@ body {
 
 /* tools */
 .tools {
-    padding: 30px 0;
+    padding: 25px 0;
     background: white;
-    margin-top: 0px;
 }
 
 .tools-text {
-    transform: translateY(-10px);
+    transform: translateY(0px);
 }
 
 .tools h2 {
     margin-bottom: 20px;
     text-align: center;
     font-size: 2.2rem;
+    margin-top: -10px;
 }
 
 .tools-grid {
@@ -281,6 +337,16 @@ body {
     grid-template-columns: repeat(4, 1fr);
     gap: 40px;
     margin-left: 10px;
+}
+
+.tools h2::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 3px;
+    margin: 8px auto 0;
+    background: #ff7062;
+    border-radius: 10px;
 }
 
 /* contact */
@@ -297,7 +363,12 @@ body {
 }
 
 .about-text {
-    transform: translateY(-40px);
+    transform: translate(0px, -30px);
+    font-size: 1.3rem;
+}
+
+.about-text h2 {
+    transform: translateX(-650px);
     font-size: 1.3rem;
 }
 

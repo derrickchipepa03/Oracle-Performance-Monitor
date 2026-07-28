@@ -1,5 +1,5 @@
 /* Icon borders */
-.project-card__icon {
+.icon {
     width: 48px;
     height: 48px;
     display: flex;
@@ -10,11 +10,23 @@
     background: #ffffff;
 }
 
-.project-card__icon svg {
+.icon svg {
     width: 23px;
     height: 23px;
 }
 
+.icon1 {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon1 svg {
+    width: 35px;
+    height: 35px;
+}
 .database_icon {
     background: #fff0ee;
     border: 1px solid #ffd5d0;
@@ -25,12 +37,14 @@
     background: rgba(190, 90, 220, 0.35);
     border: 1px solid darkslateblue;
     color: #b44ce0;
+    transform: translate(140px, -10px);
 }
 
 .cloud_icon {
     background: rgba(52, 120, 246, 0.12);
     border: 1px solid rgba(52, 120, 246, 0.35);
     color: #4c8dff;
+    transform: translate(140px, -10px);
 }
 
 .monitor_icon {
@@ -49,12 +63,18 @@
     background: rgba(255, 112, 98, 0.12);
     border: 1px solid rgba(255, 112, 98, 0.35);
     color: #ff7062;
+    transform: translate(130px, -10px);
 }
 
 .square-code_icon {
     background: #fff0ee;
     border: 1px solid #ffd5d0;
     color: #ff7062;
+}
+
+.square-code_icon1 {
+    color: #ff7062;
+    transform: translate(-613px, -1px);
 }
 
 .heart-pulse_icon {
@@ -64,15 +84,16 @@
 }
 
 .file_icon {
-    background: lemonchiffon;
-    border: 1px solid greenyellow;
-    color: green;
+    background: rgba(69, 182, 73, 0.12);
+    border: 1px solid rgba(69, 182, 73, 0.35);
+    color: #45b649;
 }
 
 .settings_icon {
     background: rgba(69, 182, 73, 0.12);
     border: 1px solid rgba(69, 182, 73, 0.35);
     color: #45b649;
+    transform: translate(135px, -10px);
 }
 
 .search_icon {
