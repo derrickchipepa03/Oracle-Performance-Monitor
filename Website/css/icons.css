@@ -1,0 +1,82 @@
+/* Icon borders */
+.project-card__icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    background: #ffffff;
+}
+
+.project-card__icon svg {
+    width: 23px;
+    height: 23px;
+}
+
+.database_icon {
+    background: #fff0ee;
+    border: 1px solid #ffd5d0;
+    color: #ff7062;
+}
+
+.databasee_icon {
+    background: rgba(190, 90, 220, 0.35);
+    border: 1px solid darkslateblue;
+    color: #b44ce0;
+}
+
+.cloud_icon {
+    background: rgba(52, 120, 246, 0.12);
+    border: 1px solid rgba(52, 120, 246, 0.35);
+    color: #4c8dff;
+}
+
+.monitor_icon {
+    background: rgba(69, 182, 73, 0.12);
+    border: 1px solid rgba(69, 182, 73, 0.35);
+    color: #45b649;
+}
+
+.file-code_icon {
+    background: #edf4ff;
+    border: 1px solid #d2f1d5;
+    color: #3478f6;
+}
+
+.square-terminal_icon {
+    background: rgba(255, 112, 98, 0.12);
+    border: 1px solid rgba(255, 112, 98, 0.35);
+    color: #ff7062;
+}
+
+.square-code_icon {
+    background: #fff0ee;
+    border: 1px solid #ffd5d0;
+    color: #ff7062;
+}
+
+.heart-pulse_icon {
+    background: #f6edff;
+    border: 1px solid #ead5ff;
+    color: #b44ce0;
+}
+
+.file_icon {
+    background: lemonchiffon;
+    border: 1px solid greenyellow;
+    color: green;
+}
+
+.settings_icon {
+    background: rgba(69, 182, 73, 0.12);
+    border: 1px solid rgba(69, 182, 73, 0.35);
+    color: #45b649;
+}
+
+.search_icon {
+    background: #edf4ff;
+    border: 1px solid #d2f1d5;
+    color: #3478f6;
+}

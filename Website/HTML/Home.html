@@ -17,8 +17,11 @@
 
     <title>Operational Intelligence Platform</title>
     <link rel="stylesheet" href="../css/style.css">
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/lucide@latest" defer></script>
     <script src="../js/script.js" defer></script>
+    <link rel="stylesheet" href="../css/icons.css">
+    <link rel="stylesheet" href="../css/modal.css">
+    <link rel="stylesheet" href="../css/projects.css">
 </head>
 
 <body>
@@ -83,6 +86,13 @@
                     View Tools → 
                 </button>
             </div>
+            <div class="languages">
+                <span>Python</span>
+                <span>SQL</span>
+                <span>JavaScript</span>
+                <span>Linux</span>
+                <span>Oracle</span>
+            </div>
         </section>
 
         <section
@@ -95,8 +105,8 @@
                 </h2>
 
                 <div class="project-grid">
-                    <article class="project-card oracle" data-project="oracle">
-                        <div class="oracle_icon">
+                    <article class="project-card">
+                        <div class="project-card__icon database_icon">
                             <i data-lucide="database"></i>
                         </div>
                         <h3>Enterprise Performance Monitor</h3>
@@ -106,9 +116,9 @@
                         </p>
                     </article>
 
-                    <article class="project-card sql" data-project="sql">
-                        <div class="sql">
-                            <i data-lucide="code"></i>
+                    <article class="project-card">
+                        <div class="project-card__icon file-code_icon">
+                            <i data-lucide="file-code"></i>
                         </div>
                         <h3>SQL Automation Toolkit</h3>
                         <p>
@@ -117,9 +127,9 @@
                         </p>
                     </article>
 
-                    <article class="project-card linux" data-project="linux">
-                        <div class="sql">
-                            <i data-lucide="cloud"></i>
+                    <article class="project-card">
+                        <div class="project-card__icon monitor_icon">
+                            <i data-lucide="monitor"></i>
                         </div>
                         <h3>Linux Server Monitor</h3>
                         <p>
@@ -129,21 +139,17 @@
                     </article>
                 </div>
             </div>
-            <button class="project-card__link">
-                View Project → 
-            </button>
         </section>
 
         <section class="what-i-build">
-            <div class="section-container2">
+            <div class="what-i-build-text">
                 <h2>What I Build</h2>
-
             </div>
 
             <div class="build-grid">
                 <article>
-                    <div class="software_icon">
-                        <i data-lucide="database"></i>
+                    <div class="project-card__icon square-terminal_icon">
+                        <i data-lucide="square-terminal"></i>
                     </div>
                     <h3>Software Applications</h3>
                     <p>
@@ -152,18 +158,18 @@
                 </article>
 
                 <article>
-                    <div class="database_icon">
+                    <div class="project-card__icon databasee_icon">
                         <i data-lucide="database"></i>
                     </div>
-                    <h3>Database Systems </h3>
+                    <h3>Database Systems</h3>
                     <p>
                         Performance monitoring, SQL tuning, automation and database administration tools.
                     </p>
                 </article>
 
                 <article>
-                    <div class="automation_icon">
-                        <i data-lucide="database"></i>
+                    <div class="project-card__icon settings_icon">
+                        <i data-lucide="settings"></i>
                     </div>
                     <h3>Automation & Workflows</h3>
                     <p>
@@ -172,8 +178,8 @@
                 </article>
 
                 <article>
-                    <div class="Infrastructure_icon">
-                        <i data-lucide="database"></i>
+                    <div class="project-card__icon cloud_icon">
+                        <i data-lucide="cloud"></i>
                     </div>
                     <h3>Infrastructure & Monitoring</h3>
                     <p>
@@ -185,11 +191,13 @@
 
         <section class="tools">
             <div class="section-container">
-                <h2>Tools</h2>
+                <div class="tools-text">
+                    <h2>Tools</h2>
+                </div>
                 <div class="tools-grid">
-                    <article>
-                    <div class="software_icon">
-                        <i data-lucide="database"></i>
+                    <article class="project-card">
+                    <div class="project-card__icon square-code_icon">
+                        <i data-lucide="square-code"></i>
                     </div>
                     <h3>Sql formatter</h3>
                     <p>
@@ -197,9 +205,9 @@
                     </p>
                 </article>
 
-                <article>
-                    <div class="database_icon">
-                        <i data-lucide="database"></i>
+                <article class="project-card">
+                    <div class="project-card__icon heart-pulse_icon">
+                        <i data-lucide="heart-pulse"></i>
                     </div>
                     <h3>DB Health Checker </h3>
                     <p>
@@ -207,9 +215,9 @@
                     </p>
                 </article>
 
-                <article>
-                    <div class="automation_icon">
-                        <i data-lucide="database"></i>
+                <article class="project-card">
+                    <div class="project-card__icon settings_icon">
+                        <i data-lucide="file"></i>
                     </div>
                     <h3>Log Analyser</h3>
                     <p>
@@ -217,9 +225,9 @@
                     </p>
                 </article>
 
-                <article>
-                    <div class="Infrastructure_icon">
-                        <i data-lucide="database"></i>
+                <article class="project-card">
+                    <div class="project-card__icon search_icon">
+                        <i data-lucide="search"></i>
                     </div>
                     <h3>Query Analyser</h3>
                     <p>
@@ -230,10 +238,11 @@
             </div>
         </section>
 
-        <section class="contact">
+        <section class="about">
             <div class="section-container">
-                <h2>Contact</h2>
-
+                <div class="about-text">
+                    <h2>Contact</h2>
+                </div>
                 <p>
                     For enquiries, email
                     <a href="mailto:info@yourcompany.com">
