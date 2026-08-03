@@ -6,7 +6,8 @@
 
 html,
 body {
-    min-width: 1200px;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 body {
@@ -20,6 +21,10 @@ body {
 .section-container {
     width: min(1200px, 90%);
     margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .section-container1 {
