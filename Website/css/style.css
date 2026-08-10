@@ -136,6 +136,11 @@ body {
     font-size: 1rem;
 }
 
+.hero-left p {
+    max-width: 550px;
+    font-size: 1rem;
+}
+
 .hero-title {
     display: flex;
     align-items: center;
@@ -145,13 +150,19 @@ body {
 
 .hero-title h1 {
     margin: 0;
+    font-size: 1.2rem;
 }
 
 .hero-title svg {
-    width: 36px;
-    height: 36px;
+    width: 25px;
+    height: 25px;
     color: #ff7062;
-    transform: translateX(-565px);
+    transform: translateX(-350px);
+}
+
+.herop1 p {
+    max-width: 550px;
+    font-size: 2rem;
 }
 
 /* hero1 */
