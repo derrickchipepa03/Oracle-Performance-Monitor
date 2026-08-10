@@ -7,10 +7,10 @@
 html,
 body {
     width: 100%;
-    overflow-x: hidden;
 }
 
 body {
+    overflow-x: hidden;
     background: #ffffff;
     color: #131313;
     font-family: "Kumbh Sans", sans-serif;
@@ -136,6 +136,24 @@ body {
     font-size: 1rem;
 }
 
+.hero-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color:#ff7062;
+}
+
+.hero-title h1 {
+    margin: 0;
+}
+
+.hero-title svg {
+    width: 36px;
+    height: 36px;
+    color: #ff7062;
+    transform: translateX(-565px);
+}
+
 /* hero1 */
 
 .hero1 {
@@ -188,6 +206,17 @@ body {
     color: #555555;
     font-size: 0.9rem;
 }
+
+.language {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.language img {
+    width: 22px;
+    height: 22px;
+}
  
  .built-with {
     display: flex;
@@ -225,6 +254,43 @@ body {
 
 .link:hover {
     transform: translateY(-3px);
+}
+
+.link1 {
+    display: block;
+    margin: 0 auto;
+    width: fit-content;
+    margin-top: 20px;
+    padding: 10px 20px;
+    align-self: center;
+    color:#131313;
+    cursor: pointer;
+    text-decoration: none;
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+.link--projects1 {
+    background: lightgray;
+    border: 1px solid black;
+}
+
+.link1:hover {
+    color: #ff7062;
+}
+
+.tags {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: #555555;
+    font-size: 0.9rem;
+}
+
+.tags img {
+    width: 20px;
+    height: 20px;
 }
 
 .block {

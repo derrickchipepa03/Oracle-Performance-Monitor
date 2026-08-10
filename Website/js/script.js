@@ -3,43 +3,83 @@ console.log("Projects loaded")
 // Defining whats going to be inside of each project card with const projects identifier
 
 const projects = {
-    oracle: {
-        title: "",
-        description: "",
-        problem: "",
-        solution: "",
+    assistant: {
+        title: "AI Business Assistant",
+        description: "An intelligent AI-powered assistant designed to automate repetitive business tasks, improve productivity and reduce manual work across an organisation.",
+        problem: "Small businesses spend hours every week answering repetitive emails, processing documents, creating reports and searching for information. These tasks reduce productivity and take time away from higher-value work.",
+        solution: "The AI Business Assistant uses large language models and intelligent workflows to automate common business tasks while remaining easy to use through a modern web interface.",
         features: [
-            "",
-            "",
-            ""
+            "AI-powered chat assistant",
+            "Document summarisation",
+            "Email drafting",
+            "Task automation",
+            "User authentication",
+            "Admin dashboard",
+            "Analytics",
+            "Secure API integration"
         ],
-        technologies: "",
+        technologies: [
+            "Python",
+            "FastAPI",
+            "JavaScript",
+            "HTML",
+            "CSS",
+            "PostgreSQL",
+            "OpenAI API",
+            "Docker"
+        ],
     },
 
-    sql: {
-        title: "",
-        description: "",
-        problem: "",
-        solution: "",
+    automation: {
+        title: "Workflow Automation Platform",
+        description: "A platform designed to automate repetitive business processes by connecting applications, APIs and internal workflows through a modern visual interface.",
+        problem: "Businesses often rely on manual processes to transfer information between systems, leading to wasted time, inconsistent data and avoidable human error.",
+        solution: "The Workflow Automation Platform enables businesses to create automated workflows that connect applications, trigger actions and manage business processes without repetitive manual intervention.",
         features: [
-            "",
-            "",
-            ""
+            "Visual workflow builder",
+            "API integrations",
+            "Email automation",
+            "Scheduled workflows",
+            "Conditional logic",
+            "Error handling",
+            "Notifications",
+            "Workflow History"
         ],
-        technologies: "",
+        technologies: [
+            "Python",
+            "JavaScript",
+            "FastAPI",
+            "REST APIs",
+            "Docker",
+            "PostgreSQL",
+            "Redis"   
+        ]
     },
 
-    linux: {
-        title: "",
-        description: "",
-        problem: "",
-        solution: "",
+    Analytics: {
+        title: "Business Analytics Dashboard",
+        description: "A modern analytics platform providing interactive dashboards, KPI monitoring and reporting to help businesses make informed decisions from their operational data.",
+        problem: "Business information is often scattered across multiple systems, making it difficult to identify trends, monitor performance and make timely decisions.",
+        solution: "The Business Analytics Dashboard centralises data into a single platform where users can monitor performance through interactive charts, reports and custom dashboards.",
         features: [
-            "",
-            "",
-            ""
+            "Interactive dashboards",
+            "KPI monitoring",
+            "Custom reports",
+            "Data visualisation",
+            "Export to PDF/Excel",
+            "User roles",
+            "Alerts",
+            "Responsive design"
         ],
-        technologies: "",
+        technologies: [
+            "Python",
+            "JavaScript",
+            "Chart.js",
+            "HTML",
+            "CSS",
+            "PostgreSQL",
+            "FastAPI"
+        ]
     }
 };
 
@@ -72,6 +112,7 @@ function openModal(projectKey) {
     modalTechnologies.textContent = project.technologies;
 
     modalFeatures.innerHTML = "";
+    modalTechnologies.innerHTML = "";
 
     // For features as they will be in line format
     project.features.forEach((feature) => {
@@ -82,6 +123,17 @@ function openModal(projectKey) {
 
     modalOverlay.classList.remove("hidden");
     document.body.style.overflow = "hidden";
+
+    // For technologies as they will be in line format
+    project.technologies.forEach((tech) => {
+        const listItem = document.createElement("li")
+        listItem.textContent = tech;
+        modalTechnologies.appendChild(listItem);
+    });
+
+    modalOverlay.classList.remove("hidden");
+    document.body.style.overflow = "hidden";
+
 }
 
 // Function for closing card
@@ -103,15 +155,16 @@ projectCards.forEach((card) => {
 closeButton.addEventListener("click", closeModal);
 modalOverlay.addEventListener("click", (event) => {
     if (event.target == modalOverlay) {
-        closeModal;
+        closeModal();
     }
 });
 
 // add event listener so when user presses escape on keyboard, function close modal is executed and closes the card.
 document.addEventListener("keydown", (event) => {
     if (event.key == "escape") {
-        closeModal;
+        closeModal();
     }
 });
 
-lucide.createIcons();
+
+// lucide.createIcons();
