@@ -2,8 +2,10 @@ console.log("Projects loaded")
 
 // Defining whats going to be inside of each project card with const projects identifier
 
-const projects = {
-    assistant: {
+const projects = [
+      {
+        id: "AIBusinessAssistant",
+        category: "ai",
         title: "AI Business Assistant",
         description: "An intelligent AI-powered assistant designed to automate repetitive business tasks, improve productivity and reduce manual work across an organisation.",
         problem: "Small businesses spend hours every week answering repetitive emails, processing documents, creating reports and searching for information. These tasks reduce productivity and take time away from higher-value work.",
@@ -16,7 +18,7 @@ const projects = {
             "User authentication",
             "Admin dashboard",
             "Analytics",
-            "Secure API integration"
+            "Secure API integration",
         ],
         technologies: [
             "Python",
@@ -30,7 +32,9 @@ const projects = {
         ],
     },
 
-    automation: {
+   {
+        id: "WorkflowAutomationPlatform",    
+        category: "automation",
         title: "Workflow Automation Platform",
         description: "A platform designed to automate repetitive business processes by connecting applications, APIs and internal workflows through a modern visual interface.",
         problem: "Businesses often rely on manual processes to transfer information between systems, leading to wasted time, inconsistent data and avoidable human error.",
@@ -56,7 +60,9 @@ const projects = {
         ]
     },
 
-    Analytics: {
+    {
+        id: "BusinessAnalyticsDashboard",
+        category: "analytics",
         title: "Business Analytics Dashboard",
         description: "A modern analytics platform providing interactive dashboards, KPI monitoring and reporting to help businesses make informed decisions from their operational data.",
         problem: "Business information is often scattered across multiple systems, making it difficult to identify trends, monitor performance and make timely decisions.",
@@ -81,9 +87,9 @@ const projects = {
             "FastAPI"
         ]
     }
-};
+];
 
-// Definitions relevant to the specific oidentifies in my html file for the modals
+// Definitions relevant to the specific oidentifies in my html file for the modals //
 const projectCards = document.querySelectorAll(".project-card");
 const modalOverlay = document.querySelector(".modal-overlay");
 const closeButton = document.querySelector(".modal-close");
@@ -94,10 +100,16 @@ const modalProblem = document.getElementById("modal-problem");
 const modalSolution = document.getElementById("modal-solution");
 const modalFeatures = document.getElementById("modal-features");
 const modalTechnologies = document.getElementById("modal-technologies");
+const allProject = document.getElementById("all-project");
+const aiProject = document.getElementById("AIBusinessAssistant");
+const automationProject = document.getElementById("WorkflowAutomationPlatform");
+const analyticsProject = document.getElementById("BusinessAnalyticsDashboard");
+
+// Open/Close card section //
 
 // Function for open card
-function openModal(projectKey) {
-    const project = projects[projectKey];
+function openModal(projectId) {
+    const project = projects.find((project) => project.id === projectId);
 
     if (!project) {
         console.error('Project "${projectKey}" was not found.')
@@ -145,9 +157,9 @@ function closeModal() {
 // add event listener for open card
 projectCards.forEach((card) => {
     card.addEventListener("click", () => {
-        const projectKey = card.dataset.project;
-        console.log(projectKey);
-        openModal(projectKey);
+        const projectId = card.dataset.project;
+        console.log(projectId);
+        openModal(projectId);
   });
 });
 
