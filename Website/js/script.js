@@ -151,6 +151,45 @@ const allProject = document.getElementById("all-project");
 const aiProject = document.getElementById("AIBusinessAssistant");
 const automationProject = document.getElementById("WorkflowAutomationPlatform");
 const analyticsProject = document.getElementById("BusinessAnalyticsDashboard");
+const projectFilterButtons = document.querySelectorAll(".project-sections");
+const Container = document.getElementById("Projects-container");
+const featuredProjects = document.getElementById("featured-projects");
+
+// section for creating and filtering project cards //
+
+function createProjectCards(projects){
+    const projectContainer = document.getElementById("Projects-container");
+}
+
+function renderProjects(projectsList, container){
+    const featuredProjects = projects.filter((project) => project.card);
+    renderProjects(projects);
+};
+function filterProjects(projects, filterButtons){
+    if (filterButtons === "all") {
+        renderProjects(projects);
+    }
+    if (filterButtons === "ai") {
+        const filteredProjects = projects.filter((project) => project.modal.categories.includes("ai"));
+        renderProjects(filteredProjects);
+    }
+    if (filterButtons === "automation") {
+        const filteredProjects = projects.filter((project) => project.modal.categories.includes("automation"));
+        renderProjects(filteredProjects);
+    }
+    if (filterButtons === "analytics") {
+        const filteredProjects = projects.filter((project) => project.modal.categories.includes("analytics"));
+        renderProjects(filteredProjects);
+    }
+};
+
+// event listeners for if someone clicks filter buttons //
+projectFilterButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+        const filter = button.dataset.filter;
+        filterProjects(projects, filter);
+    });
+});
 
 // Open/Close card section //
 
