@@ -157,7 +157,7 @@ const featuredProjects = document.getElementById("featured-projects");
 
 // section for creating and filtering project cards //
 
-function createProjectCards(projects){
+function createProjectCards(project){
     const projectContainer = document.getElementById("Projects-container");
 }
 
@@ -165,7 +165,8 @@ function renderProjects(projectsList, container){
     const featuredProjects = projects.filter((project) => project.card);
     renderProjects(projects);
 };
-function filterProjects(projects, filterButtons){
+
+function filterProjects(category){
     if (filterButtons === "all") {
         renderProjects(projects);
     }
