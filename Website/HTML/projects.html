@@ -91,23 +91,23 @@
         </section>
         <p class="search-p">Filter to find keywords in projects</p>
         <section class="project-sections">
-            <button class="all-project">
+            <button class="all-project" data-filter="all">
                 <span>All</span>
             </button>
-            <button class="ai-project">
+            <button class="ai-project" data-filter="ai">
                 <span>AI</span>
             </button>
-            <button class="automation-project">
+            <button class="automation-project" data-filter="automation">
                 <span>Automation</span>
             </button>
-            <button class="analytics-project">
+            <button class="analytics-project" data-filter="analytics">
                 <span>Analytics</span>                
             </button>
         </section>
 
         <section class="project-list">
             <h2 class="projects-header">Projects</h2>
-            <div class="project-grid"></div>
+            <div class="project-grid" id="projects-grid"></div>
         </section>
         <section class="more">
             <div class="more">

@@ -154,17 +154,70 @@ const analyticsProject = document.getElementById("BusinessAnalyticsDashboard");
 const projectFilterButtons = document.querySelectorAll(".project-sections");
 const Container = document.getElementById("Projects-container");
 const featuredProjects = document.getElementById("featured-projects");
+const grid = document.getElementById("projects-grid");
+const section = document.getElementById("project-sections");
 
 // section for creating and filtering project cards //
 
-function createProjectCards(project){
-    const projectContainer = document.getElementById("Projects-container");
+function createProjectCard(project){
+    const card = document.createElement("article");
+    card.classList.add("project-card");
+
+    const iconContainer = document.createElement("div");
+    iconContainer.classList.add("project-icon");
+
+    const icon = document.createElement("i");
+    icon.setAttribute("data-lucide", project.card.icon);
+
+    const title = document.createElement("h3");
+    title.textContent = project.card.title;
+
+    const description = document.createElement("project-description");
+    description.classList.add("project-description");
+    description.textContent = project.card.description;
+
+    const technologies = document.createElement("technologies");
+    technologies.classList.add("project-technologies");
+
+    project.card.technologies.forEach((technology) => {
+        const technologyTag = document.createElement("span");
+        technologyTag.textContent = technology;
+        technologies.append(technologyTag);
+    });
+
+    const button =  document.createElement("button");
+    button.classList.add("project-button");
+    button.textContent = "View Project";
+
+    iconContainer.append(icon);
+
+    card.append (
+        iconContainer,
+        title,
+        description,
+        technologies,
+        button
+    );
+
+    return card;
 }
 
-function renderProjects(projectsList, container){
-    const featuredProjects = projects.filter((project) => project.card);
-    renderProjects(projects);
+function renderProjects(projectsList, grid){
+    container.innerHTML = "";
+    projectsList.forEach((project) => {
+        const card = createProjectCard(project);
+
+        grid.append(card);
+    });
+
+    lucide.createIcons();
 };
+
+// runs the projetcs
+renderProjects(
+    projects,  
+    grid
+);
 
 function filterProjects(category){
     if (filterButtons === "all") {
