@@ -101,25 +101,22 @@
 /* Featured projects */
 .project-list {
     padding: 80px 0;
-    background: #f4f4f4;
+    background: black;
 }
 
 .more {
-    margin-bottom: 50px;
-    padding: 20px;
-    transform: translate(0px,100px);
     padding: 80px 0;
-    background: #f4f4f4;
+    background: #ff7062;
 }
 
 .more h2 {
     text-align: center;
-    transform: translate(0px, -230px);
+    color: white;
 }
 
 .more p {
     text-align: center;
-    transform: translate(0px, -200px);
+    color: white;
 }
 
 .projects-grid {
@@ -155,10 +152,21 @@
     text-align: center;
     align-items: center;
     transform: translate(0px,-30px);
+    color: white;
 }
 
 .search-p {
     align-items: center;
     text-align: center;
     transform: translate(0px,-15px);
+}
+
+.lining {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 3px;
+    margin: 8px auto 0;
+    background: #ff7062;
+    border-radius: 10px;
 }
