@@ -152,10 +152,8 @@ const aiProject = document.getElementById("AIBusinessAssistant");
 const automationProject = document.getElementById("WorkflowAutomationPlatform");
 const analyticsProject = document.getElementById("BusinessAnalyticsDashboard");
 const projectFilterButtons = document.querySelectorAll(".project-sections");
-const Container = document.getElementById("Projects-container");
 const featuredProjects = document.getElementById("featured-projects");
 const grid = document.getElementById("projects-grid");
-const section = document.getElementById("project-sections");
 
 // section for creating and filtering project cards //
 
@@ -203,7 +201,7 @@ function createProjectCard(project){
 }
 
 function renderProjects(projectsList, grid){
-    container.innerHTML = "";
+    grid.innerHTML = "";
     projectsList.forEach((project) => {
         const card = createProjectCard(project);
 
