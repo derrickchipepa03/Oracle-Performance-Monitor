@@ -617,6 +617,10 @@ body {
     transform: translate(-200px, 0px);
 }
 
+.Github {
+    transform: translate(-130px,0px);
+}
+
 /* modal */
 .modal-overlay {
     position: fixed;

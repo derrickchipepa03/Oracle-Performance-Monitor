@@ -211,11 +211,35 @@ function renderProjects(projectsList, grid){
     lucide.createIcons();
 };
 
-// runs the projetcs
-renderProjects(
-    projects,  
-    grid
-);
+
+// PROJECTS PAGE
+
+const projectsContainer =
+    document.getElementById("projects-grid");
+
+if (projectsContainer) {
+    renderProjects(
+        projects,
+        projectsContainer
+    );
+}
+
+// HOME PAGE
+
+const featuredProjectsContainer =
+    document.getElementById("project-grid");
+
+if (featuredProjectsContainer) {
+    const featuredProjects = projects.filter(
+        (project) => project.card.featured
+    );
+
+    renderProjects(
+        featuredProjects,
+        featuredProjectsContainer
+    );
+
+}
 
 function filterProjects(category){
     if (filterButtons === "all") {
