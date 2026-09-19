@@ -165,16 +165,23 @@ function createProjectCard(project){
     iconContainer.classList.add("project-icon");
 
     const icon = document.createElement("i");
-    icon.setAttribute("data-lucide", project.card.icon);
+    icon.setAttribute("data-lucide", project.card.icon.lucide);
+
+    icon.classList.add(
+        project.card.icon.baseClass,
+        project.card.icon.className
+    );
+
+    iconContainer.append(icon);
 
     const title = document.createElement("h3");
     title.textContent = project.card.title;
 
-    const description = document.createElement("project-description");
+    const description = document.createElement("p");
     description.classList.add("project-description");
     description.textContent = project.card.description;
 
-    const technologies = document.createElement("technologies");
+    const technologies = document.createElement("div");
     technologies.classList.add("project-technologies");
 
     project.card.technologies.forEach((technology) => {
