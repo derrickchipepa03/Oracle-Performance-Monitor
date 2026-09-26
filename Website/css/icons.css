@@ -37,14 +37,16 @@
     background: rgba(190, 90, 220, 0.35);
     border: 1px solid darkslateblue;
     color: #b44ce0;
-    transform: translate(190px, -10px);
+    position: relative;
+    left: 135px;
 }
 
 .cloud_icon {
     background: rgba(52, 120, 246, 0.12);
     border: 1px solid rgba(52, 120, 246, 0.35);
     color: #4c8dff;
-    transform: translate(190px, -10px);
+    position: relative;
+    left: 135px;
 }
 
 .monitor_icon {
@@ -63,7 +65,8 @@
     background: rgba(255, 112, 98, 0.12);
     border: 1px solid rgba(255, 112, 98, 0.35);
     color: #ff7062;
-    transform: translate(190px, -10px);
+    position: relative;
+    right: -135px;
 }
 
 .square-code_icon {
@@ -74,7 +77,14 @@
 
 .square-code_icon1 {
     color: #ff7062;
-    transform: translate(-540px, -1px);
+    position: relative;
+    right: 535px;
+}
+
+.square-code_icon3 {
+    color: #ff7062;
+    position: relative;
+    right: 615px;
 }
 
 .square-code_icon2 {
@@ -98,7 +108,8 @@
     background: rgba(69, 182, 73, 0.12);
     border: 1px solid rgba(69, 182, 73, 0.35);
     color: #45b649;
-    transform: translate(185px, -10px);
+    position: relative;
+    left: 135px;
 }
 
 .search_icon {
@@ -127,12 +138,6 @@
     display: flex;
     justify-content: flex-start;
     margin-bottom: 20px;
-}
-
-.project-icon svg {
-    width: 32px;
-    height: 32px;
-    color: #ff7062;
 }
 
 .project-title {

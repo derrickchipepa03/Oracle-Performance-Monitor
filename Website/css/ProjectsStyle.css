@@ -100,8 +100,8 @@
 
 /* Featured projects */
 .project-list {
-    padding: 80px 0;
-    background: black;
+    padding: 70px 0;
+    background: #f7f7f7;
 }
 
 .more {
@@ -152,7 +152,7 @@
     text-align: center;
     align-items: center;
     transform: translate(0px,-30px);
-    color: white;
+    color: black;
 }
 
 .search-p {
