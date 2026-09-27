@@ -20,6 +20,7 @@ const projects = [
         },
 
         modal: {
+            category: ["ai"],
             title: "AI Business Assistant",
             description: "An intelligent AI-powered assistant designed to automate repetitive business tasks, improve productivity and reduce manual work across an organisation.",
             problem: "Small businesses spend hours every week answering repetitive emails, processing documents, creating reports and searching for information. These tasks reduce productivity and take time away from higher-value work.",
@@ -154,6 +155,31 @@ const analyticsProject = document.getElementById("BusinessAnalyticsDashboard");
 const projectFilterButtons = document.querySelectorAll(".project-sections");
 const featuredProjects = document.getElementById("featured-projects");
 const grid = document.getElementById("projects-grid");
+const header = document.getElementById("site-header");
+
+// header scroll
+let lastScrollY = window.scrollY;
+const headerHeight = header.offsetHeight;
+
+window.addEventListener("scroll", () => {
+
+    const currentScrollY = window.scrollY;
+
+    if (currentScrollY <= headerHeight) {
+        header.classList.add("header-visible");
+        lastScrollY = currentScrollY;
+        return;
+    }
+    if (currentScrollY < lastScrollY) {
+        header.classList.add("header-visibke");
+    }
+
+    else if (currentScrollY > lastScrollY) {
+        header.classList.remove("header-visible");
+    }
+
+    lastScrollY = currentScrollY;
+});
 
 // section for creating and filtering project cards //
 
@@ -193,6 +219,10 @@ function createProjectCard(project){
     const button =  document.createElement("button");
     button.classList.add("project-button");
     button.textContent = "View Project";
+
+    button.addEventListener("click", () => {
+        openModal(project.id);
+    });
 
     iconContainer.append(icon);
 

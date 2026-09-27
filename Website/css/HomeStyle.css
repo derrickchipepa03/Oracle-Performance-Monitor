@@ -42,17 +42,11 @@ main {
 
 /* Navigation */
 .navbar {
-    position: sticky;
-    top: 0;
-    z-index: 999;
     height: 75px;
     background: #131313;
 }
 
-.navbar1 {
-    position: sticky;
-    top: 75px;
-    z-index: 998;
+.dropdown-bar {
     height: 42px;
     background: #1b1b1b;
     border-top: 1px solid #292929;
@@ -69,7 +63,7 @@ main {
     padding: 0 50px;
 }
 
-.navbar__container1 {
+.dropdown-bar-container {
     width: min(1300px, 100%);
     height: 100%;
     margin: 0 auto;
@@ -78,6 +72,24 @@ main {
     align-items: center;
     justify-content: flex-end;
     gap: 25px;
+}
+
+.site-header {
+    width: 100%;
+    z-index: 1000;
+}
+
+.site-header.header-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    transform: translateY(-100%);
+    transition: transform 0.35s ease-out;
+}
+
+.site-header.header-fixed.header-visible {
+    transform: translateY(0);
 }
 
 #navbar__logo {
