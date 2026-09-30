@@ -4,7 +4,18 @@
     padding: 0;
 }
 
+/* ========================================
+PROJECTS SEARCH
+========================================*/
 .Projects-container {
+    padding: 65px 0;
+    background:
+      linear=gradient(
+        110deg,
+        #fff7f5 0%,
+        #ffffff 55%,
+         #f8f9fb 100%
+      );
     align-items: center;
     transform: translate(0px, 10px);
 }
@@ -17,6 +28,13 @@
 .project-grid {
     align-items: center;
 }
+
+.project-sections{
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 50px;
+} 
 
 .search-wrapper {
     align-items: center;
@@ -31,13 +49,15 @@
     --border-color: blue;
 }
 
-.project-sections{
+.search-p {
     align-items: center;
     text-align: center;
-    justify-content: center;
-    padding: 50px;
+    transform: translate(0px,-15px);
 }
 
+/* ========================================
+FILTER BUTTONS 
+========================================*/
 .all-project {
     display: inline-flex;
     align-items: center;
@@ -98,30 +118,24 @@
     color: blue;
 }
 
-/* Featured projects */
+/* ========================================
+Featured projects
+======================================== */
 .project-list {
-    padding: 70px 0;
+    padding: 45px 0 5px;
     background: #f7f7f7;
 }
 
-.more {
-    padding: 80px 0;
-    background: #ff7062;
-}
-
-.more h2 {
+.projects-header {
     text-align: center;
-    color: white;
-}
-
-.more p {
-    text-align: center;
-    color: white;
+    align-items: center;
+    transform: translate(0px,-30px);
+    color: black;
 }
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(3, 2fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 24px;
 }
 
@@ -148,17 +162,115 @@
     box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
 }
 
-.projects-header {
-    text-align: center;
-    align-items: center;
-    transform: translate(0px,-30px);
-    color: black;
+.project-icon {
+    margin-bottom: 20px;
 }
 
-.search-p {
+.project-description {
+    margin: 0;
+    line-height: 1.6;
+    color:#555;
+}
+
+.project-technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.project-technologies span {
+    padding: 5px 10px;
+    border-radius: 20px;
+    background: #f3f3f3;
+    font-size: 0.8rem;
+}
+
+.project-button {
+    width: 100%;
+    margin-top: auto;
+    padding: 11px 16px;
+    border: 0;
+    border-radius: 7px;
+    background: #ff7062;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition:
+        background .2s ease,
+        transform .2s ease;
+}
+
+.project-button:hover {
+    background: #f45f52;
+    transform: translateY(-2px);
+}
+
+.cta-section {
+    padding: 45px 0;
+    background: #f7f7f7;
+}
+
+.cta-container {
+    width: min(1200px, 90%);
+    margin: 0 auto;
+    display: flex;
     align-items: center;
-    text-align: center;
-    transform: translate(0px,-15px);
+    gap: 25px;
+    padding: 100px 35px;
+    background: #fff0ee;
+    border-radius: 14px;
+    border: 1px solid #ffd8d3;
+}
+
+.cta-icon {
+    width: 55px;
+    height: 55px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #ffffff;
+    color: #ff7062;
+}
+
+.cta-icon svg {
+    width: 25px;
+    height: 25px;
+}
+
+.cta-text {
+    flex: 1;
+}
+
+.cta-text h2 {
+    margin-bottom: 6px;
+    color: #131313;
+    font-size: 1.4rem;
+}
+
+.cta-text p {
+    margin: 0;
+    color: #555;
+    line-height: 1.6;
+}
+
+.cta-button {
+    flex-shrink: 0;
+    padding: 12px 22px;
+    background: #ff7062;
+    color: #ffffff;
+    border-radius: 7px;
+    text-decoration: none;
+    font-weight: 600;
+    transition:
+        transform .2s ease,
+        background .2s ease;
+}
+
+.cta-button:hover {
+    background: #f45f52;
+    transform: translateY(-2px);
 }
 
 .lining {
@@ -169,12 +281,4 @@
     margin: 8px auto 0;
     background: #ff7062;
     border-radius: 10px;
-}
-
-.BuiltByDerrick {
-    transform: translate(-200px, 0px);
-}
-
-.Github {
-    transform: translate(-130px,0px);
 }

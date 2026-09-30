@@ -51,6 +51,7 @@ main {
     background: #1b1b1b;
     border-top: 1px solid #292929;
     border-bottom: 1px solid #292929;
+    color: #ffffff;
 }
 
 .navbar__container {
@@ -70,8 +71,8 @@ main {
     padding: 0 50px;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    gap: 25px;
+    justify-content: center;
+    gap: 155px;
 }
 
 .site-header {
@@ -153,8 +154,71 @@ main {
 
 /* Hero */
 .hero {
-    padding: 70px 0;
-    background: #ffffff;
+    padding: 50px 0;
+     background:
+        radial-gradient(
+            circle at 0% 55%,
+            rgba(255, 112, 98, 0.08) 0%,
+            rgba(255, 112, 98, 0.035) 25%,
+            transparent 45%
+        ),
+
+        radial-gradient(
+            circle at 100% 15%,
+            rgba(255, 120, 160, 0.07) 0%,
+            rgba(255, 120, 160, 0.025) 25%,
+            transparent 45%
+        ),
+
+        #ffffff;
+}
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+    width: 420px;
+    height: 520px;
+
+    left: -300px;
+    top: 100px;
+
+    background: linear-gradient(
+        135deg,
+        rgba(255, 112, 98, 0.14),
+        rgba(255, 180, 200, 0.08),
+        rgba(120, 150, 255, 0.05)
+    );
+
+    border-radius: 45% 55% 60% 40%;
+    transform: rotate(25deg);
+
+    filter: blur(2px);
+
+    pointer-events: none;
+}
+
+.hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 380px;
+    height: 330px;
+    right: -220px;
+    top: -160px;
+    background: linear-gradient(
+        145deg,
+        rgba(255, 120, 170, 0.11),
+        rgba(255, 112, 98, 0.06),
+        transparent
+    );
+
+    border-radius: 40% 60% 55% 45%;
+
+    transform: rotate(-20deg);
+
+    pointer-events: none;
 }
 
 .hero-container {
@@ -210,11 +274,67 @@ main {
     font-size: 2rem;
 }
 
+.hero-stats {
+    display: flex;
+    align-items: center;
+    margin-top: 28px;
+    margin-bottom: 28px;
+}
+
+.hero-stat {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0px 25px;
+    border-right: 1px solid #ddd;
+}
+
+.hero-stat:first-child {
+    padding-left: 0;
+}
+
+.hero-stat:last-child {
+    border-right: none;
+}
+
+.hero-stat svg {
+    width: 25px;
+    height: 25px;
+    color: #ff7062;
+}
+
+.hero-stat div {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-stat strong {
+    color: #131313;
+    font-size: 0.7rem;
+    font-weight: 700;
+}
+.hero-stat span {
+    color: #777;
+    font-size: 0.7rem;
+    margin-top: 3px;
+}
+
 /* hero1 */
 
 .hero1 {
     padding: 50px 0;
-    background: whitesmoke;
+    background:
+        radial-gradient(
+            circle at 0% 60%,
+            rgba(255, 112, 98, 0.13),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 100% 30%,
+            rgba(255, 190, 145, 0.10),
+            transparent 28%
+        ),
+        #fff7f3;
     
 }
 
@@ -429,7 +549,20 @@ main {
 /* Featured projects */
 .featured-products {
     padding: 40px 0; 
-    background:whitesmoke;
+    background:
+        radial-gradient(
+            circle at 100% 40%,
+            rgba(130, 100, 255, 0.045),
+            transparent 32%
+        ),
+
+        radial-gradient(
+            circle at 0% 70%,
+            rgba(70, 140, 255, 0.035),
+            transparent 30%
+        ),
+
+        #f7f8fa;
 }
 
 .featured-products__header {
@@ -449,6 +582,8 @@ main {
     background: #ff7062;
     border-radius: 10px;
 }
+
+/* PROJECTS */
 
 .project-grid {
     display: grid;
@@ -503,19 +638,90 @@ main {
     margin-left: 700px;
 }
 
+.project-icon {
+    margin-bottom: 20px;
+}
+
+.project-description {
+    margin: 0;
+    line-height: 1.6;
+    color:#555;
+}
+
+.project-technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.project-technologies span {
+    padding: 5px 10px;
+    border-radius: 20px;
+    background: #f3f3f3;
+    font-size: 0.8rem;
+}
+
+.project-button {
+    width: 100%;
+    margin-top: auto;
+    padding: 11px 16px;
+
+    border: 0;
+    border-radius: 7px;
+
+    background: #ff7062;
+    color: white;
+
+    font-weight: 600;
+    cursor: pointer;
+
+    transition:
+        background .2s ease,
+        transform .2s ease;
+}
+
+.project-button:hover {
+    background: #f45f52;
+    transform: translateY(-2px);
+}
+
 .front-mage {
     display: flex;
 }
 
 /* what i build */
 .what-i-build {
-    padding: 10px 0;
-    background: black;
-    margin-top: 0px;
-    text-align: center;
-    color: white;
-    margin-bottom: 0px;
     position: relative;
+    overflow: hidden;
+    color: white;
+    padding: 70px 0;
+
+    background:
+        radial-gradient(
+            circle at 8% 45%,
+            rgba(255, 112, 98, 0.13),
+            transparent 25%
+        ),
+
+        radial-gradient(
+            circle at 43% 55%,
+            rgba(150, 70, 255, 0.10),
+            transparent 25%
+        ),
+
+        radial-gradient(
+            circle at 75% 45%,
+            rgba(50, 200, 110, 0.07),
+            transparent 25%
+        ),
+
+        radial-gradient(
+            circle at 95% 35%,
+            rgba(40, 120, 255, 0.10),
+            transparent 25%
+        ),
+
+        #0d1117;
 }
 
 .what-i-build h2 {
@@ -579,10 +785,29 @@ main {
     line-height: 1.5;
 }
 
+.build-card:hover {
+    transform: translateY(-6px);
+    background: rgba(255, 255, 255, 0.055);
+    border-color: rgba(255, 112, 98, 0.30);
+    box-shadow:
+        0 18px 40px rgba(0, 0, 0, 0.25);
+}
+
 /* tools */
 .tools {
     padding: 25px 0;
-    background: white;
+     background:
+        radial-gradient(
+            circle at 5% 30%,
+            rgba(100, 140, 255, 0.09),
+            transparent 27%
+        ),
+        radial-gradient(
+            circle at 90% 70%,
+            rgba(150, 100, 255, 0.07),
+            transparent 28%
+        ),
+        #f5f8fc;
 }
 
 .tools-text {
@@ -641,8 +866,7 @@ main {
 
 .about-section {
     padding: 50px 0;
-    background: whitesmoke;
-    
+    background: whitesmoke; 
 }
 
 .about-container {
@@ -654,7 +878,7 @@ main {
     gap: 60px;
 }
 
-.about-content {
+.about-content { 
     max-width: 520px;
 }
 

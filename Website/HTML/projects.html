@@ -29,14 +29,13 @@
     
 </head>
 <body>
+    <header class="site-header" id="site-header">
     <nav class="navbar">
-        <div class="navbar__container">   
+        <div class="navbar__container">
             <a href="Home.html" id="navbar__logo">
-              Business Automation Solutions
-            </a>
-             <div class="icon1 square-code_icon2">
                 <i data-lucide="code-xml"></i>
-            </div>
+                <span>Business Automation Solutions</span>
+            </a>
             <button
                 class="navbar__toggle"
                 id="mobile-menu"
@@ -75,123 +74,143 @@
             </ul>
         </div>
     </nav>
+
+    <nav class="dropdown-bar">
+        <div class="dropdown-bar-container"></div>
+    </nav>
+</header>
     <main>
         <section class="Projects-container">
             <div class="Projects-header">
-                <h2>Projects</h2>
+                <span class="projects-label">EXPLORE PROJECTS</span>
+                <h1>Projects</h1>
                 <p>
                     Software built to solve real business                   
                     problems through AI and automation. 
                 </p>
             </div>
+
+        <div class="projects-search">
             <div class="search-wrapper">
-                <label for="search">Search</label>
+                <i data-lucide="search"></i>
                 <input type="search" id="search" placeholder="Search for projects...">
             </div>
             <div class="project-grid"></div>
-        </section>
-        <p class="search-p">Filter to find keywords in projects</p>
-        <section class="project-sections">
-            <button class="all-project" data-filter="all">
-                <span>All</span>
+        </div>
+        <div class="project-sections">
+
+            <button
+                class="all-project active"
+                data-filter="all">
+                All
             </button>
-            <button class="ai-project" data-filter="ai">
-                <span>AI</span>
+
+            <button
+                class="ai-project"
+                data-filter="ai">
+                AI
             </button>
-            <button class="automation-project" data-filter="automation">
-                <span>Automation</span>
+
+            <button
+                class="automation-project"
+                data-filter="automation">
+                Automation
             </button>
-            <button class="analytics-project" data-filter="analytics">
-                <span>Analytics</span>                
+
+            <button
+                class="analytics-project"
+                data-filter="analytics">
+                Analytics
             </button>
+
+        </div>
+
         </section>
 
         <section class="project-list">
             <h2 class="projects-header">Projects</h2>
             <div class="project-grid" id="projects-grid"></div>
         </section>
-        <section class="more">
-            <div class="more">
-                <h2>Have an idea?</h2>
-                <p>Have an idea or want to know more about projects and tools we offer?
-                    Send us an email and we can discuss options.
-                </p>
+
+        <section class="cta-section">
+            <div class="cta-container">
+                <div class="cta-icon">
+                    <i data-lucide="lightbulb"></i>
+                </div>
+                <div class="cta-text">
+                    <h2>Have an idea?</h2>
+                    <p>
+                        Have an idea or want to know more about projects and tools we offer?
+                        Send us an email and we can discuss options.                      
+                    </p>
+                </div>
+                <a href="../html/contact.html" class="cta-button">
+                    Get in touch → 
+                </a>
             </div>
         </section>
-        <footer class="footer1">
-            <div class="footer-container">
-                <div class="footer__container">
-                    <a href="Home.html" id="navbar__logo">
-                      Business Automation Solutions
-                    </a>
-                    <div class="icon1 square-code_icon3">
-                        <i data-lucide="code-xml"></i>
-                    </div>
-                    <button
-                        class="navbar__toggle"
-                        id="mobile-menu"
-                        type="button"
-                        aria-label="Open navigation menu"
-                    >
-                        <span class="bar"></span>
-                        <span class="bar"></span>
-                        <span class="bar"></span>
-                    </button>
-                    <div class="footer-links">
-                        <ul class="footer__menu">
-                            <li class="navbar__item">
-                                <a href="projects.html" class="footer__links">
-                                    Explore
-                                </a>
-                            </li>
-                            <li class="navbar__item">
-                                <a href="tools.html" class="footer__links">
-                                    Connect
-                                </a>
-                            </li>
-            
-                            <li class="footer__btn">
-                                <a href="#featured-products" class="footer_button">
-                                    Learn More
-                                </a>
-                            </li>
-                        </ul>
-                        <ul class="footer__menu1">
-                            <li class="navbar__item">
-                                <a href="projects.html" class="footer__links">
-                                    Tools
-                                </a>
-                            </li>
-            
-                            <li class="navbar__item">
-                                <a href="tools.html" class="footer__links">
-                                    Github
-                                </a>
-                            </li>
-            
-                            <li class="navbar__item">
-                                <a href="contact.html" class="footer__links">
-                                    LinkedIn
-                                </a>
-                            </li>
-                            <li class="navbar__item">
-                                <a href="contact.html" class="footer__links">
-                                    Contact
-                                </a>
-                            </li>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+
+        <footer class="footer">
+        <div class="footer-main">
+            <div class="footer-brand">
+                <a href="Home.html" id="footer-logo">
+                    <i data-lucide="code-xml"></i>
+                    <span>Business Automation Solutions</span>
+                </a>
+
+                <p>Automate. Optimise. Build Better.</p>
             </div>
-            <div class="footer__container1">
-                <p>© 2026 Operational Intelligence Platform.
-                    All rights reserved.
-                </p>
                 
-                <p class="BuiltByDerrick">Built by Derrick</p>
-            </div>
-        </footer>
+                <div class="footer-column">
+                    <h4>Explore</h4>
+                    <a href="../HTML/Projects.html">Projects</a>
+                    <a href="../HTML/Tools.html">Tools</a>
+                    <a href="../HTML/Contact.html">Contact</a>
+                </div>
+
+                 <div class="footer-column">
+                    <h4>Connect</h4>
+                    <a href="#">GitHub</a>
+                    <a href="#">LinkedIn</a>
+                    <a href="#">Email</a>
+                </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 Operational Intelligence Platform.
+                All rights reserved.
+            </p>
+            <p>HTML • CSS • JavaScript</p>
+            <p>Built by Derrick</p>
+        </div>
+    </footer>
+      <div class = "modal-overlay hidden" id="project-modal">
+        <div class = "modal" role="dialog" aria-modal="true">
+            <button
+                class="modal-close"
+                id="modal-close"
+                type="button"
+                aria-label="Close Modal" 
+            >
+                &times;
+            </button>
+        <h2 id = "modal-title"></h2>
+        <h3 id = "modal-description"></h3>
+        <h3>Problem</h3>
+        <p id = "modal-problem"></p>
+        <h3>Solution</h3>
+        <p id = "modal-solution"></p>
+        <h3>Features</h3>
+        <ul id = "modal-features"></ul>
+        <h3>Technologies</h3>
+        <p id = "modal-technologies"></p>
+        <h3>Screenshots</h3>
+        <img src="" alt="">
+        <a href="">
+          View on Github
+        </a>
+        </div>
+      </div>
     </main>
 </body>
 </html>

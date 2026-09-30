@@ -190,23 +190,33 @@ function createProjectCard(project){
     const iconContainer = document.createElement("div");
     iconContainer.classList.add("project-icon");
 
-    const icon = document.createElement("i");
-    icon.setAttribute("data-lucide", project.card.icon.lucide);
+    const iconBox = document.createElement("div");
 
-    icon.classList.add(
+    iconBox.classList.add(
         project.card.icon.baseClass,
         project.card.icon.className
+    );  
+
+    const icon = document.createElement("i");
+
+    icon.setAttribute(
+        "data-lucide",
+         project.card.icon.lucide
     );
 
-    iconContainer.append(icon);
+    iconBox.append(icon); 
+    iconContainer.append(iconBox);
 
+    // TITLE
     const title = document.createElement("h3");
     title.textContent = project.card.title;
 
+    // DESCRIPTION
     const description = document.createElement("p");
     description.classList.add("project-description");
     description.textContent = project.card.description;
 
+    // TECHNOLOGIES
     const technologies = document.createElement("div");
     technologies.classList.add("project-technologies");
 
@@ -216,16 +226,17 @@ function createProjectCard(project){
         technologies.append(technologyTag);
     });
 
+    // BUTTON
     const button =  document.createElement("button");
     button.classList.add("project-button");
     button.textContent = "View Project";
 
+    // OPEN MODAL
     button.addEventListener("click", () => {
         openModal(project.id);
     });
 
-    iconContainer.append(icon);
-
+    // BUILD CARD
     card.append (
         iconContainer,
         title,
@@ -315,28 +326,27 @@ function openModal(projectId) {
         return;
     }
     
+    const modal = project.modal;
+
     // turn each of the card content identifiers into text
-    modalTitle.textContent = project.title;
-    modalDescription.textContent = project.description;
-    modalProblem.textContent = project.problem;
-    modalSolution.textContent = project.solution;
-    modalTechnologies.textContent = project.technologies;
+    modalTitle.textContent = modal.title;
+    modalDescription.textContent = modal.description;
+    modalProblem.textContent = modal.problem;
+    modalSolution.textContent = modal.solution;
 
+    // FEATURES
     modalFeatures.innerHTML = "";
-    modalTechnologies.innerHTML = "";
 
-    // For features as they will be in line format
-    project.features.forEach((feature) => {
+    modal.features.forEach((feature) => {
         const listItem = document.createElement("li")
         listItem.textContent = feature;
         modalFeatures.appendChild(listItem);
     });
 
-    modalOverlay.classList.remove("hidden");
-    document.body.style.overflow = "hidden";
+    // TECHNOLOGIES
+    modalTechnologies.innerHTML = "";
 
-    // For technologies as they will be in line format
-    project.technologies.forEach((tech) => {
+    modal.technologies.forEach((tech) => {
         const listItem = document.createElement("li")
         listItem.textContent = tech;
         modalTechnologies.appendChild(listItem);
@@ -349,26 +359,24 @@ function openModal(projectId) {
 
 // Function for closing card
 function closeModal() {
+    if (!modalOverlay) {
+        return;
+    }
     modalOverlay.classList.add("hidden");
     document.body.style.overflow = "";
 }
 
-// add event listener for open card
-projectCards.forEach((card) => {
-    card.addEventListener("click", () => {
-        const projectId = card.dataset.project;
-        console.log(projectId);
-        openModal(projectId);
-  });
-});
+if (closeButton) {
+    closeButton.addEventListener("click", closeModal);
+}
 
-// add event listiner so when user clicks card it closes the card
-closeButton.addEventListener("click", closeModal);
-modalOverlay.addEventListener("click", (event) => {
-    if (event.target == modalOverlay) {
-        closeModal();
-    }
-});
+if (modalOverlay) {
+    modalOverlay.addEventListener("click", (event) => {
+        if (event.target == modalOverlay) {
+            closeModal();
+        }
+    });
+}
 
 // add event listener so when user presses escape on keyboard, function close modal is executed and closes the card.
 document.addEventListener("keydown", (event) => {
