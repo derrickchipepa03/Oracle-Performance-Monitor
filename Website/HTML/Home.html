@@ -33,7 +33,10 @@
         <div class="navbar__container">
             <a href="Home.html" id="navbar__logo">
                 <i data-lucide="code-xml"></i>
+                <div class="navbar__brand-text">
                 <span>Business Automation Solutions</span>
+                <small>Automate. Optimise. Build Better.</small>
+                </div>
             </a>
             <button
                 class="navbar__toggle"
@@ -76,10 +79,81 @@
 
     <nav class="dropdown-bar">
         <div class="dropdown-bar-container">
-            <span>AI & Automation</span>
-            <span>Databases</span>
-            <span>Software</span>
-            <span>Infrastucture</span>
+
+            <div class="dropdown">
+                <button class="dropdown-trigger">
+                    AI & Automation
+                    <span>⌄</span>
+                </button>
+                <div class="dropdown-menu">
+                    <a href="#">AI Business Assistant</a>
+                    <a href="#">Workflow Automation</a>
+                    <a href="#">AI Tools</a>
+
+                    <div class="dropdown-divider"></div>
+                        <a href="../HTML/projects.html" class="view-all">
+                            View all AI projects →
+                        </a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropdown-trigger">
+                    Databases
+                    <span>⌄</span>
+                </button>
+                <div class="dropdown-menu">
+                    <a href="#">Database Monitoring</a>
+                    <a href="#">SQL Performance</a>
+                    <a href="#">DB Health Checker</a>
+
+                <div class="dropdown-divider"></div>
+                    <a href="../HTML/projects.html" class="view-all">
+                        View all Database projects →
+                    </a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropdown-trigger">
+                    Software
+                    <span>⌄</span>
+                </button>
+                <div class="dropdown-menu">
+                <a href="#">Web Applications</a>  
+                <a href="#">Business Tools</a>   
+                <a href="#">APIs & Integrations</a>
+
+                <div class="dropdown-divider"></div>
+                    <a href="../HTML/projects.html" class="view-all">
+                        View all Software projects →
+                    </a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropdown-trigger">
+                    Infrastructure
+                    <span>⌄</span>
+                </button>
+                <div class="dropdown-menu">
+                <a href="#">System Monitoring</a>    
+                <a href="#">Log Analysis</a>
+                <a href="#">Linux & Servers</a>
+
+                <div class="dropdown-divider"></div>
+                    <a href="../HTML/projects.html" class="view-all">
+                        View all Infrastructure projects →
+                    </a>
+                </div>
+            </div>
+            <div class="dropdown-search">
+                <i data-lucide="search"></i>
+                <input
+                type="search"
+                id="header-search"
+                placeholder="Search..."
+                aria-label="Search website">
+            </div>
         </div>
     </nav>
 
@@ -315,25 +389,29 @@
             </a>
         </section>
 
-        <section class="hero1">
-            <div class="hero-container1">
-                <div class="hero-left1">
-                    <h1>About Me</h1>
+        <section class="about">
+            <div class="about-container">
+                <div class="about-left">
+                    <span class="about-label">ABOUT ME</span>
 
-                <p>
+                <h2>
                     Building software around automation, data & systems.
-                </p>
-                <p>
+                </h2>
+
+                <p class="">
                     Systems DBA with a passion for building software that helps businesses operate more efficiently.
                 </p>
-                <p>
+                <p class="">
                     My experience spans database systems, infrastructure and software development, giving me a practical approach to building reliable solutions.
                 </p>
+                
                 <div class="about-tags">
                     <span>Database Systems</span>
                     <span>Automation</span>
                     <span>Software Development</span>
                 </div>
+                
+                <div></div>
                 <p>
                     For enquiries, email
                     <a href="mailto:info@yourcompany.com">
@@ -341,11 +419,9 @@
                     </a>
                     </p>
 
-               <div class="hero-buttons1">
+               <div class="about-image">
                </div>
-               <div class="built-with">
-                
-            </div>
+               <div class="built-with"></div>
             </div>
             <div class="block">
                 <img src="/Website/images/image.png" alt="Business automation workspace">
