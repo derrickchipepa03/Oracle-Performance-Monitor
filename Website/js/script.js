@@ -15,6 +15,7 @@ const projects = [
             title: "AI Business Assistant",
             description: "An intelligent AI-powered assistant designed to automate repetitive business tasks, improve productivity and reduce manual work across an organisation.",            
             technologies: ["Python", "JavaScript", "AI"],
+            image: "../images/ai-business-assistant.png",
             status: "In Development",
             featured: true,
         },
@@ -61,6 +62,7 @@ const projects = [
             title: "Workflow Automation Platform",
             description: "A platform designed to automate repetitive business processes by connecting applications, APIs and internal workflows through a modern visual interface.",            
             technologies: ["Python", "API", "Integration"],
+            image: "../images/workflow-automation-platform.png",
             status: "In Development",
             featured: true,
         },
@@ -105,6 +107,7 @@ const projects = [
             title: "Business Analytics Dashboard",
             description: "A modern analytics platform providing interactive dashboards, KPI monitoring and reporting to help businesses make informed decisions from their operational data.",            
             technologies: ["Python", "Dashboards", "Data"],
+            image: "../images/business-analytics-dashboard.png",
             status: "In Development",
             featured: true
         },
@@ -187,6 +190,23 @@ function createProjectCard(project){
     const card = document.createElement("article");
     card.classList.add("project-card");
 
+    // IMAGE
+
+    const imageContainer = document.createElement("div");
+    imageContainer.classList.add("project-card__image");
+
+    const image = document.createElement("img");
+
+    image.src = project.card.image;
+    image.alt = `${project.card.title} preview`;
+
+    // CONTENT
+
+    const content = document.createElement("div");
+    content.classList.add("project-card__content");
+
+    // ICON
+
     const iconContainer = document.createElement("div");
     iconContainer.classList.add("project-icon");
 
@@ -226,6 +246,31 @@ function createProjectCard(project){
         technologies.append(technologyTag);
     });
 
+
+    // FOOTER
+    const footer = document.createElement("div");
+    footer.classList.add("project-card__footer");
+
+    // STATUS
+    const status = document.createElement("div");
+    status.classList.add("project-card__status");
+
+    const statusDot = document.createElement("span");
+    statusDot.classList.add("status-dot");
+
+    const statusText = document.createElement("span");
+    statusText.textContent = project.card.status;
+
+    status.append(statusDot, statusText);
+
+    const projectTop = document.createElement("div");
+    projectTop.classList.add("project-card__top");
+
+    projectTop.append(
+        iconContainer,
+        status
+    );
+
     // BUTTON
     const button =  document.createElement("button");
     button.classList.add("project-button");
@@ -236,14 +281,25 @@ function createProjectCard(project){
         openModal(project.id);
     });
 
-    // BUILD CARD
-    card.append (
-        iconContainer,
+    // IMAGE + STATUS
+imageContainer.append(
+    image
+);
+
+    // BUILD FOOTER
+    footer.append(button);
+
+       // BUILD CONTENT
+    content.append (
+        projectTop,
         title,
         description,
         technologies,
-        button
+        footer
     );
+
+     // BUILD CARD
+    card.append(imageContainer, content);
 
     return card;
 }

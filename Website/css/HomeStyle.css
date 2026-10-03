@@ -604,13 +604,6 @@ main {
 
 /* BUTTONS */
 
-.about-actions {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-top: 25px;
-}
-
 .about-contact,
 .about-email {
     display: inline-flex;
@@ -790,6 +783,7 @@ main {
 .link--projects1 {
     background: white;
     border: 1px solid black;
+    margin-left: auto;
 }
 
 .link--tools1 {
@@ -871,10 +865,9 @@ main {
 }
 
 .featured-products__header {
-    margin-bottom: 0px;
+    margin: 0;
     text-align: center;
     font-size: 2rem;
-    transform: translateY(-20px);
     color: black;
 }
 
@@ -888,25 +881,59 @@ main {
     border-radius: 10px;
 }
 
+.featured-project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 35px rgba(0, 0, 0, .08);
+}
+
+.section-heading {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 28px;
+}
+
+.section-heading .link--projects1 {
+    margin: 0 0 0 auto;
+    padding: 0;
+
+    background: transparent;
+    border: none;
+
+    color: #ff7062;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
 /* PROJECTS */
 
 .project-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
+    width: 100%;
 }
 
 .project-card {
-    min-height: 280px;
-    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    min-height: 480px;
+    padding: 0;
+    overflow: hidden;
+    background: #ffffff;
     border: 1px solid #e6e6e6;
     border-radius: 14px;
-    background: lightgrey;
     color: #131313;
     cursor: pointer;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
     transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease;
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
 }
 
 .project-card h3 {
@@ -916,7 +943,8 @@ main {
 
 .project-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
+    box-shadow:
+        0 18px 40px rgba(0, 0, 0, 0.10);
 }
 
 .project-card__tags {
@@ -943,8 +971,20 @@ main {
     margin-left: 700px;
 }
 
+.project-card__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 14px;
+}
+
 .project-icon {
-    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    flex-shrink: 0;
 }
 
 .project-description {
@@ -990,8 +1030,95 @@ main {
     transform: translateY(-2px);
 }
 
-.front-mage {
+.front-image {
     display: flex;
+}
+
+/* project image */
+.project-card__image {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 210px;
+    flex-shrink: 0;
+    overflow: hidden;
+    background: #eeeeee;
+}
+
+
+/* ACTUAL IMAGE */
+
+.project-card__image img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    transition: transform 0.35s ease;
+}
+
+
+.project-card:hover .project-card__image img {
+    transform: scale(1.025);
+}
+
+
+/* ========================================
+   STATUS BADGE
+   ======================================== */
+
+.project-card__status {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    position: static;
+    width: fit-content;
+    padding: 6px 25px;
+    background: #fff7e6;
+    border: 1px solid #f3dfae;
+    border-radius: 20px;
+    color: #8a6517;
+    font-size: 0.7rem;
+    font-weight: 600;
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.status-dot {
+    display: block;
+    width: 7px;
+    height: 7px;
+    flex-shrink: 0;
+    background: #e6a817;
+    border-radius: 50%;
+}
+
+
+.featured-project-card:hover .project-image img {
+    transform: scale(1.025);
+}
+
+/* =========================
+   CARD CONTENT
+   ========================= */
+
+.project-card__content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 20px;
+}
+
+.project-card__content h3 {
+    margin: 0 0 8px;
+    color: #171717;
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 1.3;
 }
 
 /* what i build */
@@ -1053,7 +1180,7 @@ main {
 .build-grid {
     width: min(1400px, 95%);
     margin: 0 auto;
-
+    margin-top: 40px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
 
@@ -1063,12 +1190,21 @@ main {
 
 /* controls contents INSIDE each section */
 .build-grid article {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    padding: 28px 24px;
+    background: rgba(255, 255, 255, 0.025);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    border-radius: 14px;
 
-    text-align: center;
-    padding: 20px;
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        background 0.25s ease;
+}
+
+.build-grid article:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 112, 98, 0.45);
+    background: rgba(255, 255, 255, 0.045);
 }
 
 
@@ -1150,6 +1286,61 @@ main {
     grid-template-columns: repeat(4, 1fr);
     gap: 40px;
     margin-left: 10px;
+}
+
+/* contact buttons */
+.about-buttons {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    position: relative;
+    top: 20px;
+}
+
+
+/* PRIMARY */
+
+.about-button--primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 20px;
+    background: #ff7062;
+    border: 1px solid #ff7062;
+    border-radius: 6px;
+    color: #ffffff;
+    font-weight: 600;
+    text-decoration: none;
+
+    transition: 0.2s ease;
+}
+
+.about-button--primary:hover {
+    background: #f45f52;
+    transform: translateY(-2px);
+}
+
+
+/* SECONDARY */
+
+.about-button--secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 20px;
+    background: transparent;
+    border: 1px solid #222222;
+    border-radius: 6px;
+    color: #222222;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+.about-button--secondary:hover {
+    background: #222222;
+    color: #ffffff;
+    transform: translateY(-2px);
 }
 
 /* footer */
