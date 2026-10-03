@@ -61,7 +61,7 @@ main {
     width: min(1300px, 100%);
     height: 100%;
     margin: 0 auto;
-    padding: 0 50px;
+    padding: 0 50px;    
 }
 
 /* =========================
@@ -279,6 +279,7 @@ main {
 }
 
 .navbar__menu {
+    justify-self: center;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -286,19 +287,42 @@ main {
 }
 
 .navbar__links {
-    display: flex;
-    align-items: center;
+    position: relative;
+    display: inline-block;
     padding: 12px 16px;
-    color: #ffffff;
+    color: white;
     text-decoration: none;
+}
+
+.navbar__links::after {
+    content: "";
+    position: absolute;
+    left: 16px;
+    right: 16px;
+    bottom: 3px;
+    height: 2px;
+    background: #ff7062;
+    border-radius: 10px;
+    opacity: 0;
+}
+.navbar__links.active {
+    color: #ff7062;
+}
+
+.navbar__links.active::after {
+    opacity: 1;
 }
 
 .navbar__links:hover {
     color: #f77062;
 }
 
+.navbar__links:hover::after {
+    width: 22px;
+}
+
 .navbar__btn {
-    list-style: none;
+    justify-self: end;
 }
 
 .button {
@@ -740,25 +764,25 @@ main {
 .link--sql-tools {
     background: #ff7062;
     position: relative;
-    top: 150px;
+    top: 120px;
 }
 
 .link--db-tools {
     background: #ff7062;
     position: relative;
-    top: 115px;
+    top: 85px;
 }
 
 .link--Analyser-tools {
     background: #ff7062;
     position: relative;
-    top: 150px;
+    top: 120px;
 }
 
 .link--query-tools {
     background: #ff7062;
     position: relative;
-    top: 150px;
+    top: 120px;
 }
 
 .link:hover {
@@ -979,6 +1003,9 @@ main {
     margin-bottom: 14px;
 }
 
+.tools .project-card {
+    min-height: 360px;
+}
 .project-icon {
     display: flex;
     align-items: center;

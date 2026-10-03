@@ -34,7 +34,10 @@
             <div class="navbar__container">
                 <a href="Home.html" id="navbar__logo">
                     <i data-lucide="code-xml"></i>
+                    <div class="navbar__brand-text">
                     <span>Business Automation Solutions</span>
+                    <small>Automate. Optimise. Build Better.</small>
+                    </div>
                 </a>
                 <button
                     class="navbar__toggle"
@@ -49,7 +52,12 @@
     
                 <ul class="navbar__menu">
                     <li class="navbar__item">
-                        <a href="projects.html" class="navbar__links">
+                        <a href="home.html" class="navbar__links">
+                            Home
+                        </a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="projects.html" class="navbar__links active">
                             Projects
                         </a>
                     </li>
@@ -65,13 +73,12 @@
                             Contact
                         </a>
                     </li>
-    
-                    <li class="navbar__btn">
-                        <a href="#featured-products" class="button">
-                            Learn More
-                        </a>
-                    </li>
                 </ul>
+                <div class="navbar__btn">
+                    <a href="#featured-products" class="button">
+                        Learn More
+                    </a>
+                </div>
             </div>
         </nav>
     
@@ -144,6 +151,14 @@
                         </a>
                     </div>
                 </div>
+                <div class="dropdown-search">
+                    <i data-lucide="search"></i>
+                    <input
+                    type="search"
+                    id="header-search"
+                    placeholder="Search..."
+                    aria-label="Search website">
+                </div>
             </div>
         </nav>
     
@@ -154,40 +169,41 @@
                 <span class="projects-label">EXPLORE PROJECTS</span>
                 <h1>Projects</h1>
                 <p>
-                    Software built to solve real business                   
-                    problems through AI and automation. 
+
+                    Software built around automation, data and intelligent
+                    systems to solve real operational problems.
+        
                 </p>
             </div>
 
         <div class="projects-search">
             <div class="search-wrapper">
-                <i data-lucide="search"></i>
+                
                 <input type="search" id="search" placeholder="Search for projects...">
             </div>
-            <div class="project-grid"></div>
         </div>
-        <div class="project-sections">
+        <div class="project-filter">
 
             <button
-                class="all-project active"
+                class="project-filter-button all-project active"
                 data-filter="all">
                 All
             </button>
 
             <button
-                class="ai-project"
+                class="project-filter-button ai-project"
                 data-filter="ai">
                 AI
             </button>
 
             <button
-                class="automation-project"
+                class="project-filter-button automation-project"
                 data-filter="automation">
                 Automation
             </button>
 
             <button
-                class="analytics-project"
+                class="project-filter-button analytics-project"
                 data-filter="analytics">
                 Analytics
             </button>
@@ -198,6 +214,7 @@
 
         <section class="project-list">
             <h2 class="projects-header">Projects</h2>
+    
             <div class="project-grid" id="projects-grid"></div>
         </section>
 

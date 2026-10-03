@@ -33,7 +33,10 @@
             <div class="navbar__container">
                 <a href="Home.html" id="navbar__logo">
                     <i data-lucide="code-xml"></i>
+                    <div class="navbar__brand-text">
                     <span>Business Automation Solutions</span>
+                    <small>Automate. Optimise. Build Better.</small>
+                    </div>
                 </a>
                 <button
                     class="navbar__toggle"
@@ -48,13 +51,18 @@
     
                 <ul class="navbar__menu">
                     <li class="navbar__item">
+                        <a href="home.html" class="navbar__links">
+                            Home
+                        </a>
+                    </li>
+                    <li class="navbar__item">
                         <a href="projects.html" class="navbar__links">
                             Projects
                         </a>
                     </li>
     
                     <li class="navbar__item">
-                        <a href="tools.html" class="navbar__links">
+                        <a href="tools.html" class="navbar__links active">
                             Tools
                         </a>
                     </li>
@@ -64,13 +72,12 @@
                             Contact
                         </a>
                     </li>
-    
-                    <li class="navbar__btn">
-                        <a href="#featured-products" class="button">
-                            Learn More
-                        </a>
-                    </li>
                 </ul>
+                <div class="navbar__btn">
+                    <a href="#featured-products" class="button">
+                        Learn More
+                    </a>
+                </div>
             </div>
         </nav>
     
@@ -142,6 +149,14 @@
                             View all Infrastructure projects →
                         </a>
                     </div>
+                </div>
+                <div class="dropdown-search">
+                    <i data-lucide="search"></i>
+                    <input
+                    type="search"
+                    id="header-search"
+                    placeholder="Search..."
+                    aria-label="Search website">
                 </div>
             </div>
         </nav>

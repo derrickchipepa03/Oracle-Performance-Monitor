@@ -15,13 +15,13 @@ const projects = [
             title: "AI Business Assistant",
             description: "An intelligent AI-powered assistant designed to automate repetitive business tasks, improve productivity and reduce manual work across an organisation.",            
             technologies: ["Python", "JavaScript", "AI"],
+            categories: ["ai"],
             image: "../images/ai-business-assistant.png",
             status: "In Development",
             featured: true,
         },
 
         modal: {
-            category: ["ai"],
             title: "AI Business Assistant",
             description: "An intelligent AI-powered assistant designed to automate repetitive business tasks, improve productivity and reduce manual work across an organisation.",
             problem: "Small businesses spend hours every week answering repetitive emails, processing documents, creating reports and searching for information. These tasks reduce productivity and take time away from higher-value work.",
@@ -62,13 +62,13 @@ const projects = [
             title: "Workflow Automation Platform",
             description: "A platform designed to automate repetitive business processes by connecting applications, APIs and internal workflows through a modern visual interface.",            
             technologies: ["Python", "API", "Integration"],
+            categories: ["automation"],
             image: "../images/workflow-automation-platform.png",
             status: "In Development",
             featured: true,
         },
 
         modal: {    
-            category: ["automation"],
             title: "Workflow Automation Platform",
             description: "A platform designed to automate repetitive business processes by connecting applications, APIs and internal workflows through a modern visual interface.",
             problem: "Businesses often rely on manual processes to transfer information between systems, leading to wasted time, inconsistent data and avoidable human error.",
@@ -107,13 +107,13 @@ const projects = [
             title: "Business Analytics Dashboard",
             description: "A modern analytics platform providing interactive dashboards, KPI monitoring and reporting to help businesses make informed decisions from their operational data.",            
             technologies: ["Python", "Dashboards", "Data"],
+            categories: ["analytics"],
             image: "../images/business-analytics-dashboard.png",
             status: "In Development",
             featured: true
         },
 
         modal: {
-            category: ["analytics"],
             title: "Business Analytics Dashboard",
             description: "A modern analytics platform providing interactive dashboards, KPI monitoring and reporting to help businesses make informed decisions from their operational data.",
             problem: "Business information is often scattered across multiple systems, making it difficult to identify trends, monitor performance and make timely decisions.",
@@ -155,7 +155,6 @@ const allProject = document.getElementById("all-project");
 const aiProject = document.getElementById("AIBusinessAssistant");
 const automationProject = document.getElementById("WorkflowAutomationPlatform");
 const analyticsProject = document.getElementById("BusinessAnalyticsDashboard");
-const projectFilterButtons = document.querySelectorAll(".project-sections");
 const featuredProjects = document.getElementById("featured-projects");
 const grid = document.getElementById("projects-grid");
 const header = document.getElementById("site-header");
@@ -306,6 +305,9 @@ imageContainer.append(
 
 function renderProjects(projectsList, grid){
     grid.innerHTML = "";
+
+    
+
     projectsList.forEach((project) => {
         const card = createProjectCard(project);
 
@@ -345,29 +347,36 @@ if (featuredProjectsContainer) {
 
 }
 
-function filterProjects(category){
-    if (filterButtons === "all") {
-        renderProjects(projects);
-    }
-    if (filterButtons === "ai") {
-        const filteredProjects = projects.filter((project) => project.modal.categories.includes("ai"));
-        renderProjects(filteredProjects);
-    }
-    if (filterButtons === "automation") {
-        const filteredProjects = projects.filter((project) => project.modal.categories.includes("automation"));
-        renderProjects(filteredProjects);
-    }
-    if (filterButtons === "analytics") {
-        const filteredProjects = projects.filter((project) => project.modal.categories.includes("analytics"));
-        renderProjects(filteredProjects);
-    }
-};
+// FILTER
+const filterButtons = document.querySelectorAll(".project-filter-button");
 
-// event listeners for if someone clicks filter buttons //
-projectFilterButtons.forEach((button) => {
+filterButtons.forEach((button) => {
     button.addEventListener("click", () => {
+        
         const filter = button.dataset.filter;
-        filterProjects(projects, filter);
+
+        // active
+        filterButtons.forEach((btn) => {
+            btn.classList.remove("active");
+        });
+
+        button.classList.add("active");
+
+        // filter projects
+        const filteredProjects = 
+        filter === "all"
+        ? projects
+        : projects.filter((project) =>
+            project.card.categories.includes(filter)
+        );
+        
+        // Render into projects container
+        if (projectsContainer) {
+            renderProjects(
+                filteredProjects,
+                projectsContainer
+            );
+        }
     });
 });
 

@@ -49,3 +49,35 @@
     position: relative;
     left:10px;
 }
+
+#projects-grid .project-card__content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    width: 100%;
+}
+
+#projects-grid .project-technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: auto;
+    padding-top: 30px;
+    width: 100%;
+}
+
+#projects-grid .project-technologies span {
+    width: auto;
+    flex: 0 0 auto;
+}
+
+#projects-grid .project-card__footer {
+    width: 100%;
+    margin-top: 24px;
+}
+
+#projects-grid .project-button {
+    display: block;
+    width: 100%;
+    margin: 0;
+}
