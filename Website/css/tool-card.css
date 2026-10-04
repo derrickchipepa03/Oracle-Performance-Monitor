@@ -1,0 +1,83 @@
+.tool-card {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 14px;
+    padding: 28px;
+
+    min-height: 390px;
+
+    display: flex;
+    flex-direction: column;
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tool-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.tool-technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 18px;
+    margin-bottom: 29px;
+}
+
+.technology-tag {
+    background: #f3f3f3;
+    border-radius: 20px;
+    padding: 6px 10px;
+    font-size: 0.8rem;
+}
+
+.tool-button {
+    margin-top: auto;
+
+    width: fit-content;
+    padding: 10px 120px;
+
+    border: none;
+    border-radius: 6px;
+
+    background: #ff7062;
+    color: white;
+
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+    left:10px;
+}
+
+#tools-grid .tool-card__content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    width: 100%;
+}
+
+#tools-grid .tool-technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: auto;
+    padding-top: 30px;
+    width: 100%;
+}
+
+#tools-grid .tool-technologies span {
+    width: auto;
+    flex: 0 0 auto;
+}
+
+#tools-grid .tool-card__footer {
+    width: 100%;
+    margin-top: 24px;
+}
+
+#tools-grid .tool-button {
+    display: block;
+    width: 100%;
+    margin: 0;
+}

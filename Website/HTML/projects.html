@@ -18,7 +18,8 @@
     <title>Operational Intelligence Platform</title>
     <link rel="stylesheet" href="../css/HomeStyle.css">
     <link rel="stylesheet" href="../css/ProjectsStyle.css">
-    <script src="../js/script.js" defer></script>
+    <script src="../js/projects.js" defer></script>
+    <script src="../js/tools.js" defer></script>
     <script src="../js/icons.js" defer></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="../css/icons.css">
@@ -91,12 +92,12 @@
                         <span>⌄</span>
                     </button>
                     <div class="dropdown-menu">
-                        <a href="#">AI Business Assistant</a>
-                        <a href="#">Workflow Automation</a>
-                        <a href="#">AI Tools</a>
+                        <a href="../HTML/projects.html?project=AIBusinessAssistant">AI Business Assistant</a>
+                        <a href="../HTML/projects.html?project=WorkflowAutomationPlatform">Workflow Automation</a>
+                        <a href="../HTML/Tools.html?tool=AITools">AI Tools</a>
     
                         <div class="dropdown-divider"></div>
-                            <a href="../HTML/projects.html" class="view-all">
+                            <a href="../HTML/projects.html?filter=ai" class="view-all">
                                 View all AI projects →
                             </a>
                     </div>
@@ -108,12 +109,12 @@
                         <span>⌄</span>
                     </button>
                     <div class="dropdown-menu">
-                        <a href="#">Database Monitoring</a>
+                        <a href="../HTML/Toolss.html?filter=database">Database Monitoring</a>
                         <a href="#">SQL Performance</a>
-                        <a href="#">DB Health Checker</a>
+                        <a href="../HTML/Tools.html?filter=database">DB Health Checker</a>
     
                     <div class="dropdown-divider"></div>
-                        <a href="../HTML/projects.html" class="view-all">
+                        <a href="../HTML/Tools.html?filter=database" class="view-all">
                             View all Database projects →
                         </a>
                     </div>
@@ -126,11 +127,11 @@
                     </button>
                     <div class="dropdown-menu">
                     <a href="#">Web Applications</a>  
-                    <a href="#">Business Tools</a>   
+                    <a href="../HTML/projects.html?project=BusinessAnalyticsDashboard">Business Tools</a>   
                     <a href="#">APIs & Integrations</a>
     
                     <div class="dropdown-divider"></div>
-                        <a href="../HTML/projects.html" class="view-all">
+                        <a href="../HTML/projects.html?filter=automation" class="view-all">
                             View all Software projects →
                         </a>
                     </div>
@@ -142,11 +143,11 @@
                     </button>
                     <div class="dropdown-menu">
                     <a href="#">System Monitoring</a>    
-                    <a href="#">Log Analysis</a>
+                    <a href="../HTML/Tools.html?filter=database">Log Analysis</a>
                     <a href="#">Linux & Servers</a>
     
                     <div class="dropdown-divider"></div>
-                        <a href="../HTML/projects.html" class="view-all">
+                        <a href="../HTML/projects.html?filter=infrastructure" class="view-all">
                             View all Infrastructure projects →
                         </a>
                     </div>
@@ -161,24 +162,22 @@
                 </div>
             </div>
         </nav>
-    
     </header>
     <main>
         <section class="Projects-container">
-            <div class="Projects-header">
+            <div class="projects-header">
                 <span class="projects-label">EXPLORE PROJECTS</span>
-                <h1>Projects</h1>
+                <h1>Software Built for Real-World Problems</h1>
                 <p>
 
-                    Software built around automation, data and intelligent
-                    systems to solve real operational problems.
-        
+                    Explore software projects built around AI, automation and
+                    data to solve real operational challenges.
                 </p>
             </div>
 
         <div class="projects-search">
             <div class="search-wrapper">
-                
+                <i data-lucide="search"></i>
                 <input type="search" id="search" placeholder="Search for projects...">
             </div>
         </div>
@@ -187,25 +186,29 @@
             <button
                 class="project-filter-button all-project active"
                 data-filter="all">
-                All
+                <i data-lucide="layout-grid"></i>
+                <span>All</span>
             </button>
 
             <button
                 class="project-filter-button ai-project"
                 data-filter="ai">
-                AI
+                <i data-lucide="brain-circuit"></i>
+                <span>AI</span>
             </button>
 
             <button
                 class="project-filter-button automation-project"
                 data-filter="automation">
-                Automation
+                <i data-lucide="workflow"></i>
+                <span>Automation</span>
             </button>
 
             <button
                 class="project-filter-button analytics-project"
                 data-filter="analytics">
-                Analytics
+                <i data-lucide="chart-no-axes-combined"></i>
+                <span>Analytics</span>
             </button>
 
         </div>
@@ -213,8 +216,6 @@
         </section>
 
         <section class="project-list">
-            <h2 class="projects-header">Projects</h2>
-    
             <div class="project-grid" id="projects-grid"></div>
         </section>
 

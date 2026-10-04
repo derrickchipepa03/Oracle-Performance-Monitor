@@ -8,129 +8,170 @@
 PROJECTS SEARCH
 ========================================*/
 .Projects-container {
-    padding: 30px 20px 55px;
-    background:
-      linear=gradient(
+    padding: 20px 10px 22px;
+    background: linear-gradient(
         110deg,
         #fff7f5 0%,
-        #ffffff 55%,
-         #f8f9fb 100%
-      );
-    align-items: center;
-    transform: translate(0px, 10px);
-}
-
-.Projects-header {
-    align-items: center;
+        #ffffff 50%,
+        #f7f9fc 100%
+    );
     text-align: center;
 }
 
-.project-filter{
+/* HEADING */
+
+.projects-header {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.projects-label {
+    display: block;
+    margin-bottom: 10px;
+    color: #ff7062;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+}
+
+.projects-header h1 {
+    margin: 0 0 10px;
+    color: #111827;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    line-height: 1.1;
+}
+
+.projects-header p {
+    max-width: 620px;
+    margin: 0 auto;
+    color: #687080;
+    font-size: 1rem;
+    line-height: 1.55;
+}
+
+/* FILTER */
+
+.project-filter {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 10px;
-    margin-top: 28px;
-} 
-
-.project-filter button {
-    padding: 9px 18px;
-    background: white;
-    border: 1px solid #ddd;
-    border-radius: 20px;
-    color: #555;
-    font-family: inherit;
-    cursor: pointer;
+    margin-top: 18px;
 }
 
-.project-filter button:hover,
-.project-filter button.active {
+.project-filter-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    min-width: 140px;
+    padding: 12px 22px;
+    background: #ffffff;
+    border: 1px solid #e1e4e8;
+    border-radius: 24px;
+    color: #555;
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.project-filter-button svg {
+    width: 18px;
+    height: 18px;
+}
+
+.project-filter-button:hover {
+    border-color: #ff7062;
+    color: #ff7062;
+    transform: translateY(-2px);
+}
+
+.project-filter-button.active {
     background: #ff7062;
     border-color: #ff7062;
-    color: white;
+    color: #ffffff;
+    box-shadow: 0 5px 14px rgba(255, 112, 98, 0.22);
+}
+
+.project-filter-button.active:hover {
+    background: #f45f52;
+    color: #ffffff;
+}
+
+/* SEARCH */
+.projects-search {
+    width: min(700px, 100%);
+    margin: 20px auto 0;
 }
 
 .search-wrapper {
-    align-items: center;
-    text-align: center;
-    font-size: 1.2rem;
     position: relative;
-    top: 10px;
+    width: 100%;
 }
 
-#search{
-    font-size: 1.2rem;
-    color: blue;
-    --border-color: blue;
+.search-wrapper svg {
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    width: 20px;
+    height: 20px;
+    transform: translateY(-50%);
+    color: #7a8190;
+    pointer-events: none;
 }
 
-.search-p {
-    align-items: center;
-    text-align: center;
-    transform: translate(0px,-15px);
+#search {
+    width: 100%;
+    height: 48px;
+    padding: 0 18px 0 50px;
+    border: 1px solid #e1e4e8;
+    border-radius: 24px;
+    background: #ffffff;
+    color: #222;
+    font-family: inherit;
+    font-size: 0.95rem;
+    outline: none;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
 }
+
+#search::placeholder {
+    color: #9ca3af;
+}
+
+#search:focus {
+    border-color: #ff7062;
+    box-shadow:
+        0 0 0 3px rgba(255, 112, 98, 0.12);
+}
+
 
 /* ========================================
 FILTER BUTTONS 
 ========================================*/
-.all-project {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 20px;
-    border-radius: 4px;
-    background: #ff7062;
-    color: #ffffff;
-    text-decoration: none;
+.all-project svg {
+    color: red;
 }
 
-.all-project:hover {
-    color: blue;
+.ai-project svg {
+    color: #8b5cf6;
 }
 
-.ai-project {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 20px;
-    border-radius: 4px;
-    background: #ff7062;
-    color: #ffffff;
-    text-decoration: none;
+.automation-project svg {
+    color: #3b82f6;
 }
 
-.ai-project:hover {
-    color: blue;
-}
-
-.automation-project {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 20px;
-    border-radius: 4px;
-    background: #ff7062;
-    color: #ffffff;
-    text-decoration: none;
-}
-
-.automation-project:hover {
-    color: blue;
-}
-
-.analytics-project {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 20px;
-    border-radius: 4px;
-    background: #ff7062;
-    color: #ffffff;
-    text-decoration: none;
-}
-
-.analytics-project:hover {
-    color: blue;
+.analytics-project svg {
+    color: #22a06b;
 }
 
 /* ========================================
@@ -139,13 +180,6 @@ Featured projects
 .project-list {
     padding: 45px 0 5px;
     background: #f7f7f7;
-}
-
-.projects-header {
-    text-align: center;
-    align-items: center;
-    transform: translate(0px,-30px);
-    color: black;
 }
 
 #projects-grid {

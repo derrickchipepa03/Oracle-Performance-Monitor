@@ -1,10 +1,10 @@
-console.log("Projects loaded")
+console.log("tools loaded")
 
-// Defining whats going to be inside of each project card with const projects identifier
+// Defining whats going to be inside of each tool card with const tools identifier
 
-const projects = [
+const tools = [
     {
-        id: "AIBusinessAssistant",
+        id: "SQLQueryAnalyser",
 
         card: {
             icon: {
@@ -12,10 +12,10 @@ const projects = [
                 baseClass: "icon",           
                 className: "database_icon"
             },
-            title: "AI Business Assistant",
-            description: "An intelligent AI-powered assistant designed to automate repetitive business tasks, improve productivity and reduce manual work across an organisation.",            
-            technologies: ["Python", "JavaScript", "AI"],
-            categories: ["ai"],
+            title: "SQL Query Analyser",
+            description: "Analyse SQL queries to identify potential performance issues, inefficient patterns and opportunities for optimisation.",            
+            technologies: ["SQL", "Python", "Database"],
+            categories: ["database"],
             image: "../images/ai-business-assistant.png",
             status: "In Development",
             featured: true,
@@ -51,7 +51,7 @@ const projects = [
     },
 
     {
-        id: "WorkflowAutomationPlatform",
+        id: "LogAnalyser",
 
         card: {
             icon: {
@@ -59,10 +59,10 @@ const projects = [
                 baseClass: "icon",           
                 className: "file-code_icon"
             },
-            title: "Workflow Automation Platform",
-            description: "A platform designed to automate repetitive business processes by connecting applications, APIs and internal workflows through a modern visual interface.",            
-            technologies: ["Python", "API", "Integration"],
-            categories: ["automation"],
+            title: "Log Analyser",
+            description: "Analyse application and server logs to identify errors, warnings and recurring operational problems.",            
+            technologies: ["Python", "Logs", "Automation"],
+            categories: ["database"],
             image: "../images/workflow-automation-platform.png",
             status: "In Development",
             featured: true,
@@ -96,7 +96,7 @@ const projects = [
     },
 
     {
-        id: "BusinessAnalyticsDashboard",
+        id: "DatabaseHealthChecker",
 
         card: {
             icon: {
@@ -104,10 +104,10 @@ const projects = [
                 baseClass: "icon",           
                 className: "monitor_icon"
             },
-            title: "Business Analytics Dashboard",
-            description: "A modern analytics platform providing interactive dashboards, KPI monitoring and reporting to help businesses make informed decisions from their operational data.",            
-            technologies: ["Python", "Dashboards", "Data"],
-            categories: ["analytics"],
+            title: "Database Health Checker",
+            description: "Analyse database diagnostic information and identify performance, storage and availability issues.",            
+            technologies: ["Oracle", "SQL", "Monitoring"],
+            categories: ["database"],
             image: "../images/business-analytics-dashboard.png",
             status: "In Development",
             featured: true
@@ -141,7 +141,7 @@ const projects = [
     }];
 
 // Definitions relevant to the specific oidentifies in my html file for the modals //
-const projectCards = document.querySelectorAll(".project-card");
+const toolCards = document.querySelectorAll(".tool-card");
 const modalOverlay = document.querySelector(".modal-overlay");
 const closeButton = document.querySelector(".modal-close");
 
@@ -151,12 +151,12 @@ const modalProblem = document.getElementById("modal-problem");
 const modalSolution = document.getElementById("modal-solution");
 const modalFeatures = document.getElementById("modal-features");
 const modalTechnologies = document.getElementById("modal-technologies");
-const allProject = document.getElementById("all-project");
-const aiProject = document.getElementById("AIBusinessAssistant");
-const automationProject = document.getElementById("WorkflowAutomationPlatform");
-const analyticsProject = document.getElementById("BusinessAnalyticsDashboard");
-const featuredProjects = document.getElementById("featured-projects");
-const grid = document.getElementById("projects-grid");
+const alltool = document.getElementById("all-tool");
+const aitool = document.getElementById("AIBusinessAssistant");
+const automationtool = document.getElementById("WorkflowAutomationPlatform");
+const analyticstool = document.getElementById("BusinessAnalyticsDashboard");
+const featuredtools = document.getElementById("featured-tools");
+const grid = document.getElementById("tools-grid");
 const header = document.getElementById("site-header");
 
 // header scroll
@@ -173,7 +173,7 @@ window.addEventListener("scroll", () => {
         return;
     }
     if (currentScrollY < lastScrollY) {
-        header.classList.add("header-visibke");
+        header.classList.add("header-visible");
     }
 
     else if (currentScrollY > lastScrollY) {
@@ -183,44 +183,42 @@ window.addEventListener("scroll", () => {
     lastScrollY = currentScrollY;
 });
 
-// section for creating and filtering project cards //
+// section for creating and filtering tool cards //
 
-function createProjectCard(project){
+function createtoolCard(tool){
     const card = document.createElement("article");
-    card.classList.add("project-card");
+    card.classList.add("tool-card");
 
     // IMAGE
-
     const imageContainer = document.createElement("div");
-    imageContainer.classList.add("project-card__image");
+    imageContainer.classList.add("tool-card__image");
 
     const image = document.createElement("img");
 
-    image.src = project.card.image;
-    image.alt = `${project.card.title} preview`;
+    image.src = tool.card.image;
+    image.alt = `${tool.card.title} preview`;
 
     // CONTENT
-
     const content = document.createElement("div");
-    content.classList.add("project-card__content");
+    content.classList.add("tool-card__content");
 
     // ICON
 
     const iconContainer = document.createElement("div");
-    iconContainer.classList.add("project-icon");
+    iconContainer.classList.add("tool-icon");
 
     const iconBox = document.createElement("div");
 
     iconBox.classList.add(
-        project.card.icon.baseClass,
-        project.card.icon.className
+        tool.card.icon.baseClass,
+        tool.card.icon.className
     );  
 
     const icon = document.createElement("i");
 
     icon.setAttribute(
         "data-lucide",
-         project.card.icon.lucide
+         tool.card.icon.lucide
     );
 
     iconBox.append(icon); 
@@ -228,18 +226,18 @@ function createProjectCard(project){
 
     // TITLE
     const title = document.createElement("h3");
-    title.textContent = project.card.title;
+    title.textContent = tool.card.title;
 
     // DESCRIPTION
     const description = document.createElement("p");
-    description.classList.add("project-description");
-    description.textContent = project.card.description;
+    description.classList.add("tool-description");
+    description.textContent = tool.card.description;
 
     // TECHNOLOGIES
     const technologies = document.createElement("div");
-    technologies.classList.add("project-technologies");
+    technologies.classList.add("tool-technologies");
 
-    project.card.technologies.forEach((technology) => {
+    tool.card.technologies.forEach((technology) => {
         const technologyTag = document.createElement("span");
         technologyTag.textContent = technology;
         technologies.append(technologyTag);
@@ -248,36 +246,36 @@ function createProjectCard(project){
 
     // FOOTER
     const footer = document.createElement("div");
-    footer.classList.add("project-card__footer");
+    footer.classList.add("tool-card__footer");
 
     // STATUS
     const status = document.createElement("div");
-    status.classList.add("project-card__status");
+    status.classList.add("tool-card__status");
 
     const statusDot = document.createElement("span");
     statusDot.classList.add("status-dot");
 
     const statusText = document.createElement("span");
-    statusText.textContent = project.card.status;
+    statusText.textContent = tool.card.status;
 
     status.append(statusDot, statusText);
 
-    const projectTop = document.createElement("div");
-    projectTop.classList.add("project-card__top");
+    const toolTop = document.createElement("div");
+    toolTop.classList.add("tool-card__top");
 
-    projectTop.append(
+    toolTop.append(
         iconContainer,
         status
     );
 
     // BUTTON
     const button =  document.createElement("button");
-    button.classList.add("project-button");
-    button.textContent = "View Project";
+    button.classList.add("tool-button");
+    button.textContent = "View tool";
 
     // OPEN MODAL
     button.addEventListener("click", () => {
-        openModal(project.id);
+        openModal(tool.id);
     });
 
     // IMAGE + STATUS
@@ -290,7 +288,7 @@ imageContainer.append(
 
        // BUILD CONTENT
     content.append (
-        projectTop,
+        toolTop,
         title,
         description,
         technologies,
@@ -303,13 +301,13 @@ imageContainer.append(
     return card;
 }
 
-function renderProjects(projectsList, grid){
+function rendertools(toolsList, grid){
     grid.innerHTML = "";
 
     
 
-    projectsList.forEach((project) => {
-        const card = createProjectCard(project);
+    toolsList.forEach((tool) => {
+        const card = createtoolCard(tool);
 
         grid.append(card);
     });
@@ -320,35 +318,35 @@ function renderProjects(projectsList, grid){
 
 // PROJECTS PAGE
 
-const projectsContainer =
-    document.getElementById("projects-grid");
+const toolsContainer =
+    document.getElementById("tools-grid");
 
-if (projectsContainer) {
-    renderProjects(
-        projects,
-        projectsContainer
+if (toolsContainer) {
+    rendertools(
+        tools,
+        toolsContainer
     );
 }
 
 // HOME PAGE
 
-const featuredProjectsContainer =
-    document.getElementById("project-grid");
+const featuredtoolsContainer =
+    document.getElementById("tool-grid");
 
-if (featuredProjectsContainer) {
-    const featuredProjects = projects.filter(
-        (project) => project.card.featured
+if (featuredtoolsContainer) {
+    const featuredtools = tools.filter(
+        (tool) => tool.card.featured
     );
 
-    renderProjects(
-        featuredProjects,
-        featuredProjectsContainer
+    rendertools(
+        featuredtools,
+        featuredtoolsContainer
     );
 
 }
 
 // FILTER
-const filterButtons = document.querySelectorAll(".project-filter-button");
+const filterButtons = document.querySelectorAll(".tool-filter-button");
 
 filterButtons.forEach((button) => {
     button.addEventListener("click", () => {
@@ -362,36 +360,55 @@ filterButtons.forEach((button) => {
 
         button.classList.add("active");
 
-        // filter projects
-        const filteredProjects = 
+        // filter tools
+        const filteredtools = 
         filter === "all"
-        ? projects
-        : projects.filter((project) =>
-            project.card.categories.includes(filter)
+        ? tools
+        : tools.filter((tool) =>
+            tool.card.categories.includes(filter)
         );
         
-        // Render into projects container
-        if (projectsContainer) {
-            renderProjects(
-                filteredProjects,
-                projectsContainer
+        // Render into tools container
+        if (toolsContainer) {
+            rendertools(
+                filteredtools,
+                toolsContainer
             );
         }
     });
 });
 
+//dropdown to filter projects logic
+const urlParams = new URLSearchParams(window.location.search);
+const urlFilter = urlParams.get("filter");
+const toolFromURL = urlParams.get("tool");
+
+if (urlFilter) {
+    const matchingButton = document.querySelector(
+        `.tool-filter-button[data-filter="${urlFilter}"]`   
+    );
+
+    if (matchingButton) {
+        matchingButton.click();
+    }
+}
+
+if (toolFromURL) {
+    openModal(toolFromURL);
+}
+
 // Open/Close card section //
 
 // Function for open card
-function openModal(projectId) {
-    const project = projects.find((project) => project.id === projectId);
+function openModal(toolId) {
+    const tool = tools.find((tool) => tool.id === toolId);
 
-    if (!project) {
-        console.error('Project "${projectKey}" was not found.')
+    if (!tool) {
+        console.error('tool "${toolKey}" was not found.')
         return;
     }
     
-    const modal = project.modal;
+    const modal = tool.modal;
 
     // turn each of the card content identifiers into text
     modalTitle.textContent = modal.title;

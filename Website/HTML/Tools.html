@@ -17,14 +17,14 @@
 
     <title>Operational Intelligence Platform</title>
     <link rel="stylesheet" href="../css/HomeStyle.css">
-    <link rel="stylesheet" href="../css/ProjectsStyle.css">
-    <script src="../js/script.js" defer></script>
+    <link rel="stylesheet" href="../css/explore_tools.css">
+    <script src="../js/tools.js" defer></script>
     <script src="../js/icons.js" defer></script>
     <script src="https://unpkg.com/lucide@latest"></script>
-    <link rel="stylesheet" href="../css/icons.css">
+    <link rel="stylesheet" href="../css/tools-icon.css">
     <link rel="stylesheet" href="../css/modal.css">
-    <link rel="stylesheet" href="../css/projects.css">
-    <link rel="stylesheet" href="../css/explore_projects.css">
+    <link rel="stylesheet" href="../css/tools.css">
+    <link rel="stylesheet" href="../css/tool-card.css">
     
 </head>
 <body>
@@ -90,12 +90,12 @@
                         <span>⌄</span>
                     </button>
                     <div class="dropdown-menu">
-                        <a href="#">AI Business Assistant</a>
-                        <a href="#">Workflow Automation</a>
-                        <a href="#">AI Tools</a>
+                        <a href="../HTML/projects.html?project=AIBusinessAssistant">AI Business Assistant</a>
+                        <a href="../HTML/projects.html?project=WorkflowAutomationPlatform">Workflow Automation</a>
+                        <a href="../HTML/Tools.html?tool=AITools">AI Tools</a>
     
                         <div class="dropdown-divider"></div>
-                            <a href="../HTML/projects.html" class="view-all">
+                            <a href="../HTML/projects.html?filter=ai" class="view-all">
                                 View all AI projects →
                             </a>
                     </div>
@@ -107,12 +107,12 @@
                         <span>⌄</span>
                     </button>
                     <div class="dropdown-menu">
-                        <a href="#">Database Monitoring</a>
+                        <a href="../HTML/Toolss.html?filter=database">Database Monitoring</a>
                         <a href="#">SQL Performance</a>
-                        <a href="#">DB Health Checker</a>
+                        <a href="../HTML/Tools.html?filter=database">DB Health Checker</a>
     
                     <div class="dropdown-divider"></div>
-                        <a href="../HTML/projects.html" class="view-all">
+                        <a href="../HTML/Tools.html?filter=database" class="view-all">
                             View all Database projects →
                         </a>
                     </div>
@@ -125,11 +125,11 @@
                     </button>
                     <div class="dropdown-menu">
                     <a href="#">Web Applications</a>  
-                    <a href="#">Business Tools</a>   
+                    <a href="../HTML/projects.html?project=BusinessAnalyticsDashboard">Business Tools</a>   
                     <a href="#">APIs & Integrations</a>
     
                     <div class="dropdown-divider"></div>
-                        <a href="../HTML/projects.html" class="view-all">
+                        <a href="../HTML/projects.html?filter=automation" class="view-all">
                             View all Software projects →
                         </a>
                     </div>
@@ -141,11 +141,11 @@
                     </button>
                     <div class="dropdown-menu">
                     <a href="#">System Monitoring</a>    
-                    <a href="#">Log Analysis</a>
+                    <a href="../HTML/Tools.html?filter=database">Log Analysis</a>
                     <a href="#">Linux & Servers</a>
     
                     <div class="dropdown-divider"></div>
-                        <a href="../HTML/projects.html" class="view-all">
+                        <a href="../HTML/projects.html?filter=infrastructure" class="view-all">
                             View all Infrastructure projects →
                         </a>
                     </div>
@@ -160,5 +160,148 @@
                 </div>
             </div>
         </nav>
-    
+
     </header>
+    <main>
+        <section class="tools-container">
+            <div class="tools-header">
+                <span class="tools-label">EXPLORE TOOLS</span>
+                <h1>Tools for Real-World Problems</h1>
+                <p>
+
+                    Practical utilities for databases, infrastructure and automation.
+                    Built to solve real operational challenges.
+        
+                </p>
+            </div>
+
+            <div class="tools-search">
+                <div class="search-wrapper">
+                    <i data-lucide="search"></i>
+                    <input
+                        type="search"
+                        id="search"
+                        placeholder="Search for tools..."
+                    >
+                </div> 
+            </div>
+        <div class="tool-filter">
+
+            <button
+                class="tool-filter-button all-tool active"
+                data-filter="all">
+                <i data-lucide="layout-grid"></i>
+                <span>All</span>
+            </button>
+
+            <button
+                class="tool-filter-button database-tool"
+                data-filter="database">
+                <i data-lucide="database"></i>
+                <span>Database</span>
+            </button>
+
+            <button
+                class="tool-filter-button automation-tool"
+                data-filter="automation">
+                <i data-lucide="workflow"></i>
+                <span>Automation</span>
+            </button>
+
+            <button
+                class="tool-filter-button infrastructure-tool"
+                data-filter="Infrastructure">
+                <i data-lucide="server"></i>
+                <span>Infrastructure</span>
+            </button>
+
+        </div>
+
+        </section>
+
+        <section class="tool-list">    
+            <div class="tool-grid" id="tools-grid"></div>
+        </section>
+
+        <section class="cta-section">
+            <div class="cta-container">
+                <div class="cta-icon">
+                    <i data-lucide="lightbulb"></i>
+                </div>
+                <div class="cta-text">
+                    <h2>Have an idea?</h2>
+                    <p>
+                        Have an idea or want to know more about tools and tools we offer?
+                        Send us an email and we can discuss options.                      
+                    </p>
+                </div>
+                <a href="../html/contact.html" class="cta-button">
+                    Get in touch → 
+                </a>
+            </div>
+        </section>
+
+        <footer class="footer">
+        <div class="footer-main">
+            <div class="footer-brand">
+                <a href="Home.html" id="footer-logo">
+                    <i data-lucide="code-xml"></i>
+                    <span>Business Automation Solutions</span>
+                </a>
+
+                <p>Automate. Optimise. Build Better.</p>
+            </div>
+                
+                <div class="footer-column">
+                    <h4>Explore</h4>
+                    <a href="../HTML/Projects.html">Projects</a>
+                    <a href="../HTML/Tools.html">Tools</a>
+                    <a href="../HTML/Contact.html">Contact</a>
+                </div>
+
+                 <div class="footer-column">
+                    <h4>Connect</h4>
+                    <a href="#">GitHub</a>
+                    <a href="#">LinkedIn</a>
+                    <a href="#">Email</a>
+                </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 Operational Intelligence Platform.
+                All rights reserved.
+            </p>
+            <p>HTML • CSS • JavaScript</p>
+            <p>Built by Derrick</p>
+        </div>
+    </footer>
+      <div class = "modal-overlay hidden" id="project-modal">
+        <div class = "modal" role="dialog" aria-modal="true">
+            <button
+                class="modal-close"
+                id="modal-close"
+                type="button"
+                aria-label="Close Modal" 
+            >
+                &times;
+            </button>
+        <h2 id = "modal-title"></h2>
+        <h3 id = "modal-description"></h3>
+        <h3>Problem</h3>
+        <p id = "modal-problem"></p>
+        <h3>Solution</h3>
+        <p id = "modal-solution"></p>
+        <h3>Features</h3>
+        <ul id = "modal-features"></ul>
+        <h3>Technologies</h3>
+        <p id = "modal-technologies"></p>
+        <h3>Screenshots</h3>
+        <img src="" alt="">
+        <a href="">
+          View on Github
+        </a>
+        </div>
+      </div>
+    </main>
+</body>
+</html>

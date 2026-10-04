@@ -317,10 +317,6 @@ main {
     color: #f77062;
 }
 
-.navbar__links:hover::after {
-    width: 22px;
-}
-
 .navbar__btn {
     justify-self: end;
 }
