@@ -18,8 +18,10 @@
     <title>Operational Intelligence Platform</title>
     <link rel="stylesheet" href="../css/HomeStyle.css">
     <link rel="stylesheet" href="../css/ProjectsStyle.css">
+    <link rel="stylesheet" href="../css/contact.css">
     <script src="../js/script.js" defer></script>
     <script src="../js/icons.js" defer></script>
+    <script src="../js/contact.js" defer></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="../css/icons.css">
     <link rel="stylesheet" href="../css/modal.css">
@@ -90,12 +92,12 @@
                         <span>⌄</span>
                     </button>
                     <div class="dropdown-menu">
-                        <a href="#">AI Business Assistant</a>
-                        <a href="#">Workflow Automation</a>
-                        <a href="#">AI Tools</a>
+                        <a href="../HTML/projects.html?project=AIBusinessAssistant">AI Business Assistant</a>
+                        <a href="../HTML/projects.html?project=WorkflowAutomationPlatform">Workflow Automation</a>
+                        <a href="../HTML/Tools.html?tool=AITools">AI Tools</a>
     
                         <div class="dropdown-divider"></div>
-                            <a href="../HTML/projects.html" class="view-all">
+                            <a href="../HTML/projects.html?filter=ai" class="view-all">
                                 View all AI projects →
                             </a>
                     </div>
@@ -107,12 +109,12 @@
                         <span>⌄</span>
                     </button>
                     <div class="dropdown-menu">
-                        <a href="#">Database Monitoring</a>
+                        <a href="../HTML/Tools.html?filter=database">Database Monitoring</a>
                         <a href="#">SQL Performance</a>
-                        <a href="#">DB Health Checker</a>
+                        <a href="../HTML/Tools.html?filter=database">DB Health Checker</a>
     
                     <div class="dropdown-divider"></div>
-                        <a href="../HTML/projects.html" class="view-all">
+                        <a href="../HTML/Tools.html?filter=database" class="view-all">
                             View all Database projects →
                         </a>
                     </div>
@@ -125,11 +127,11 @@
                     </button>
                     <div class="dropdown-menu">
                     <a href="#">Web Applications</a>  
-                    <a href="#">Business Tools</a>   
+                    <a href="../HTML/projects.html?project=BusinessAnalyticsDashboard">Business Tools</a>   
                     <a href="#">APIs & Integrations</a>
     
                     <div class="dropdown-divider"></div>
-                        <a href="../HTML/projects.html" class="view-all">
+                        <a href="../HTML/projects.html?filter=automation" class="view-all">
                             View all Software projects →
                         </a>
                     </div>
@@ -141,11 +143,11 @@
                     </button>
                     <div class="dropdown-menu">
                     <a href="#">System Monitoring</a>    
-                    <a href="#">Log Analysis</a>
+                    <a href="../HTML/Tools.html?filter=database">Log Analysis</a>
                     <a href="#">Linux & Servers</a>
     
                     <div class="dropdown-divider"></div>
-                        <a href="../HTML/projects.html" class="view-all">
+                        <a href="../HTML/projects.html?filter=infrastructure" class="view-all">
                             View all Infrastructure projects →
                         </a>
                     </div>
@@ -160,5 +162,155 @@
                 </div>
             </div>
         </nav>
-    
+
     </header>
+
+    <main>
+        <section class="contact-section">
+            <div class="contact-container">
+                <div class="contacts-header">
+                    <span class="contacts-label">GET IN TOUCH</span>
+                    <h1>Have a project in mind?</h1>
+                    <p>
+    
+                        Whether you need business automation, database tooling
+                        or custom software, I'd be happy to discuss your idea.
+            
+                    </p>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Your name"
+                            required
+                        >
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Your email"
+                            required
+                        >
+                    </div>
+                    <div class="form-group">
+                        <label for="service">What do you need help with?</label>
+                        <select id="service" name="service" required>
+                            <option value="">Select a service</option>
+                            <option value="software">Software Development</option>
+                            <option value="automation">Automation</option>
+                            <option value="ai">AI Solutions</option>
+                            <option value="database">Database Solutions</option>
+                            <option value="infrastructure">Infrastructure</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Tell me about your project</label>
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="6"
+                            placeholder="Tell me a little about what you're looking to build..."
+                            required
+                        ></textarea>
+                    </div>
+                    <button type="submit" class="contact-submit">
+                        Send a message →
+                    </button>
+                </form>
+                <div class="contact-email">
+                    <span>Or email me directly</span>
+                    <a href="mailto:d.chipepa@hotmail.com">
+                        d.chipepa@hotmail.com
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="cta-container">
+                <div class="cta-icon">
+                    <i data-lucide="lightbulb"></i>
+                </div>
+                <div class="cta-text">
+                    <h2>Have an idea?</h2>
+                    <p>
+                        Have an idea or want to know more about tools and tools we offer?
+                        Send us an email and we can discuss options.                      
+                    </p>
+                </div>
+                <a href="../html/contact.html" class="cta-button">
+                    Get in touch → 
+                </a>
+            </div>
+        </section>
+
+        <footer class="footer">
+        <div class="footer-main">
+            <div class="footer-brand">
+                <a href="Home.html" id="footer-logo">
+                    <i data-lucide="code-xml"></i>
+                    <span>Business Automation Solutions</span>
+                </a>
+
+                <p>Automate. Optimise. Build Better.</p>
+            </div>
+                
+                <div class="footer-column">
+                    <h4>Explore</h4>
+                    <a href="../HTML/Projects.html">Projects</a>
+                    <a href="../HTML/Tools.html">Tools</a>
+                    <a href="../HTML/Contact.html">Contact</a>
+                </div>
+
+                 <div class="footer-column">
+                    <h4>Connect</h4>
+                    <a href="#">GitHub</a>
+                    <a href="#">LinkedIn</a>
+                    <a href="#">Email</a>
+                </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 Operational Intelligence Platform.
+                All rights reserved.
+            </p>
+            <p>HTML • CSS • JavaScript</p>
+            <p>Built by Derrick</p>
+        </div>
+    </footer>
+      <div class = "modal-overlay hidden" id="project-modal">
+        <div class = "modal" role="dialog" aria-modal="true">
+            <button
+                class="modal-close"
+                id="modal-close"
+                type="button"
+                aria-label="Close Modal" 
+            >
+                &times;
+            </button>
+        <h2 id = "modal-title"></h2>
+        <h3 id = "modal-description"></h3>
+        <h3>Problem</h3>
+        <p id = "modal-problem"></p>
+        <h3>Solution</h3>
+        <p id = "modal-solution"></p>
+        <h3>Features</h3>
+        <ul id = "modal-features"></ul>
+        <h3>Technologies</h3>
+        <p id = "modal-technologies"></p>
+        <h3>Screenshots</h3>
+        <img src="" alt="">
+        <a href="">
+          View on Github
+        </a>
+        </div>
+      </div>
+    </main>

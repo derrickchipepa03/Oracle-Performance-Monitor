@@ -22,29 +22,23 @@ const tools = [
         },
 
         modal: {
-            title: "AI Business Assistant",
-            description: "An intelligent AI-powered assistant designed to automate repetitive business tasks, improve productivity and reduce manual work across an organisation.",
-            problem: "Small businesses spend hours every week answering repetitive emails, processing documents, creating reports and searching for information. These tasks reduce productivity and take time away from higher-value work.",
-            solution: "The AI Business Assistant uses large language models and intelligent workflows to automate common business tasks while remaining easy to use through a modern web interface.",
+            title: "SQL Query Analyser",
+            description: "Analyse SQL queries to identify potential performance issues, inefficient patterns and opportunities for optimisation.",
+            problem: "Poorly written SQL can cause slow application performance, unnecessary database load and inefficient resource usage. Identifying these issues manually can be time-consuming, particularly with larger queries.",
+            solution: "The SQL Query Analyser examines SQL statements and highlights potentially inefficient patterns, providing clear recommendations that can help improve query structure and performance.",
             features: [
-                "AI-powered chat assistant",
-                "Document summarisation",
-                "Email drafting",
-                "Task automation",
-                "User authentication",
-                "Admin dashboard",
-                "Analytics",
-                "Secure API integration",
+                "SQL query analysis",
+                "Performance issue detection",
+                "Inefficient pattern detection",
+                "Query complexity analysis",
+                "Optimisation recommendations",
+                "Readable analysis results"
             ],
             technologies: [
                 "Python",
-                "FastAPI",
+                "SQL",
                 "JavaScript",
-                "HTML",
-                "CSS",
-                "PostgreSQL",
-                "OpenAI API",
-                "Docker"
+                "FastAPI"
             ],
             categories: ["ai"],
         }
@@ -62,35 +56,31 @@ const tools = [
             title: "Log Analyser",
             description: "Analyse application and server logs to identify errors, warnings and recurring operational problems.",            
             technologies: ["Python", "Logs", "Automation"],
-            categories: ["database"],
+            categories: ["automation", "infrastructure"],
             image: "../images/workflow-automation-platform.png",
             status: "In Development",
             featured: true,
         },
 
         modal: {    
-            title: "Workflow Automation Platform",
-            description: "A platform designed to automate repetitive business processes by connecting applications, APIs and internal workflows through a modern visual interface.",
-            problem: "Businesses often rely on manual processes to transfer information between systems, leading to wasted time, inconsistent data and avoidable human error.",
-            solution: "The Workflow Automation Platform enables businesses to create automated workflows that connect applications, trigger actions and manage business processes without repetitive manual intervention.",
+            title: "Log Analyser",
+            description: "Analyse application and server logs to quickly identify errors, warnings and recurring operational problems.",
+            problem: "Application and server logs can contain thousands of entries, making it difficult to manually identify important errors, repeated failures and patterns affecting system reliability.",
+            solution: "The Log Analyser processes log data, identifies important events and groups recurring issues so that problems can be investigated more quickly.",
             features: [
-                "Visual workflow builder",
-                "API integrations",
-                "Email automation",
-                "Scheduled workflows",
-                "Conditional logic",
-                "Error handling",
-                "Notifications",
-                "Workflow History"
+                "Log file analysis",
+                "Error detection",
+                "Warning detection",
+                "Recurring issue detection",
+                "Error frequency analysis",
+                "Log filtering",
+                "Summary generation"
             ],
             technologies: [
                 "Python",
                 "JavaScript",
                 "FastAPI",
-                "REST APIs",
-                "Docker",
-                "PostgreSQL",
-                "Redis"   
+                "Regular Expressions"  
             ]
         },
     },
@@ -114,27 +104,24 @@ const tools = [
         },
 
         modal: {
-            title: "Business Analytics Dashboard",
-            description: "A modern analytics platform providing interactive dashboards, KPI monitoring and reporting to help businesses make informed decisions from their operational data.",
-            problem: "Business information is often scattered across multiple systems, making it difficult to identify trends, monitor performance and make timely decisions.",
-            solution: "The Business Analytics Dashboard centralises data into a single platform where users can monitor performance through interactive charts, reports and custom dashboards.",
+            title: "Database Health Checker",
+            description: "Analyse database diagnostic information to identify performance, storage and availability issues.",
+            problem: "Database problems can develop across multiple areas including storage, sessions, waits, blocking and resource utilisation. Reviewing these areas individually can make health checks slow and inconsistent.",
+            solution: "The Database Health Checker analyses database diagnostic information and presents important findings through a simple health report with warnings and recommended areas for investigation.",
             features: [
-                "Interactive dashboards",
-                "KPI monitoring",
-                "Custom reports",
-                "Data visualisation",
-                "Export to PDF/Excel",
-                "User roles",
-                "Alerts",
-                "Responsive design"
+                "Database health overview",
+                "Storage utilisation checks",
+                "Session analysis",
+                "Blocking session detection",
+                "Performance warning detection",
+                "Database wait analysis",
+                "Health score",
+                "Recommended actions"
             ],
             technologies: [
+                "Oracle",
+                "SQL",
                 "Python",
-                "JavaScript",
-                "Chart.js",
-                "HTML",
-                "CSS",
-                "PostgreSQL",
                 "FastAPI"
             ]
         }   
@@ -151,6 +138,7 @@ const modalProblem = document.getElementById("modal-problem");
 const modalSolution = document.getElementById("modal-solution");
 const modalFeatures = document.getElementById("modal-features");
 const modalTechnologies = document.getElementById("modal-technologies");
+const modalTags = document.getElementById("modal-tags");
 const alltool = document.getElementById("all-tool");
 const aitool = document.getElementById("AIBusinessAssistant");
 const automationtool = document.getElementById("WorkflowAutomationPlatform");
@@ -404,7 +392,7 @@ function openModal(toolId) {
     const tool = tools.find((tool) => tool.id === toolId);
 
     if (!tool) {
-        console.error('tool "${toolKey}" was not found.')
+        console.error('Tool "${toolKey}" was not found.')
         return;
     }
     
@@ -429,13 +417,26 @@ function openModal(toolId) {
     modalTechnologies.innerHTML = "";
 
     modal.technologies.forEach((tech) => {
-        const listItem = document.createElement("li")
-        listItem.textContent = tech;
-        modalTechnologies.appendChild(listItem);
+        const technologyTag = document.createElement("span");
+        technologyTag.textContent = tech;
+        modalTechnologies.appendChild(technologyTag);
     });
 
     modalOverlay.classList.remove("hidden");
     document.body.style.overflow = "hidden";
+
+    // TAGS
+    modalTags.innerHTML = "";
+
+tool.card.categories.forEach((category) => {
+    const tagElement = document.createElement("span");
+    tagElement.textContent =
+        category.charAt(0).toUpperCase() + category.slice(1);
+
+    modalTags.appendChild(tagElement);
+});
+
+
 
 }
 
@@ -462,7 +463,7 @@ if (modalOverlay) {
 
 // add event listener so when user presses escape on keyboard, function close modal is executed and closes the card.
 document.addEventListener("keydown", (event) => {
-    if (event.key == "escape") {
+    if (event.key == "Escape") {
         closeModal();
     }
 });

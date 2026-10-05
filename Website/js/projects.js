@@ -151,6 +151,7 @@ const modalProblem = document.getElementById("modal-problem");
 const modalSolution = document.getElementById("modal-solution");
 const modalFeatures = document.getElementById("modal-features");
 const modalTechnologies = document.getElementById("modal-technologies");
+const modalTags = document.getElementById("modal-tags");
 const allProject = document.getElementById("all-project");
 const aiProject = document.getElementById("AIBusinessAssistant");
 const automationProject = document.getElementById("WorkflowAutomationPlatform");
@@ -430,13 +431,24 @@ function openModal(projectId) {
     modalTechnologies.innerHTML = "";
 
     modal.technologies.forEach((tech) => {
-        const listItem = document.createElement("li")
-        listItem.textContent = tech;
-        modalTechnologies.appendChild(listItem);
+        const technologyTag = document.createElement("span");
+        technologyTag.textContent = tech;
+        modalTechnologies.appendChild(technologyTag);
     });
 
     modalOverlay.classList.remove("hidden");
     document.body.style.overflow = "hidden";
+
+    // TAGS
+    modalTags.innerHTML = "";
+
+project.card.categories.forEach((category) => {
+    const tagElement = document.createElement("span");
+    tagElement.textContent =
+        category.charAt(0).toUpperCase() + category.slice(1);
+
+    modalTags.appendChild(tagElement);
+});
 
 }
 
@@ -463,7 +475,7 @@ if (modalOverlay) {
 
 // add event listener so when user presses escape on keyboard, function close modal is executed and closes the card.
 document.addEventListener("keydown", (event) => {
-    if (event.key == "escape") {
+    if (event.key == "Escape") {
         closeModal();
     }
 });
