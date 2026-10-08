@@ -349,7 +349,49 @@ if (featuredProjectsContainer) {
 }
 
 // FILTER
+
+// FILTER
+let activeFilter = "all";
+let searchTerm = "";
+
+const searchInput = document.getElementById("search");
 const filterButtons = document.querySelectorAll(".project-filter-button");
+
+function updateProjects () {
+
+    const filteredProjects = projects.filter((project) => {
+
+        // Does it match the selected category?
+        const matchesFilter = 
+        activeFilter === "all" ||
+        project.card.categories.includes(activeFilter);
+
+        // Everything we want the search bar to search
+        const searchableText = [
+            project.card.title,
+            project.card.description,
+            ...project.card.technologies,
+            ...project.card.categories
+        ]
+        .join(" ")
+        .toLowerCase();
+
+        // Does it match what the user typed?
+        const matchesSearch =
+            searchTerm === "" ||
+            searchableText.includes(searchTerm);
+
+            return matchesFilter && matchesSearch;
+
+    });
+
+    if (projectsContainer) {
+        renderProjects(
+            filteredProjects,
+            projectsContainer
+        );
+    }
+}
 
 filterButtons.forEach((button) => {
     button.addEventListener("click", () => {
@@ -363,23 +405,20 @@ filterButtons.forEach((button) => {
 
         button.classList.add("active");
 
-        // filter projects
-        const filteredProjects = 
-        filter === "all"
-        ? projects
-        : projects.filter((project) =>
-            project.card.categories.includes(filter)
-        );
-        
-        // Render into projects container
-        if (projectsContainer) {
-            renderProjects(
-                filteredProjects,
-                projectsContainer
-            );
-        }
+        updateProjects();
     });
 });
+
+if (searchInput) {
+    searchInput.addEventListener("input", () => {
+
+        searchTerm = searchInput.value
+        .trim()
+        .toLowerCase();
+
+        updateProjects();
+    });
+}
 
 //dropdown to filter projects logic
 const urlParams = new URLSearchParams(window.location.search);

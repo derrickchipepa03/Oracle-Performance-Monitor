@@ -4,41 +4,43 @@ console.log("tools loaded")
 
 const tools = [
     {
-        id: "SQLQueryAnalyser",
+        id: "AutomationAnalyser",
 
         card: {
             icon: {
-                lucide: "database",
+                lucide: "wand-sparkles",
                 baseClass: "icon",           
-                className: "database_icon"
+                className: "automation_icon"
             },
-            title: "SQL Query Analyser",
-            description: "Analyse SQL queries to identify potential performance issues, inefficient patterns and opportunities for optimisation.",            
-            technologies: ["SQL", "Python", "Database"],
-            categories: ["database"],
+            title: "Automation Opportunity Analyser",
+            description: "Describe a repetitive business process and discover where automation could save time, reduce manual work and improve efficiency.",            
+            technologies: ["JavaScript", "Automation", "Analytics"],
+            categories: ["automation"],
             image: "../images/ai-business-assistant.png",
             status: "In Development",
             featured: true,
         },
 
         modal: {
-            title: "SQL Query Analyser",
-            description: "Analyse SQL queries to identify potential performance issues, inefficient patterns and opportunities for optimisation.",
-            problem: "Poorly written SQL can cause slow application performance, unnecessary database load and inefficient resource usage. Identifying these issues manually can be time-consuming, particularly with larger queries.",
-            solution: "The SQL Query Analyser examines SQL statements and highlights potentially inefficient patterns, providing clear recommendations that can help improve query structure and performance.",
+            title: "Automation Opportunity Analyser",
+            description: "Analyse repetitive business processes and identify potential opportunities for automation.",
+            problem: "Businesses often spend significant time on repetitive administrative processes without knowing which steps could be automated or how much time those processes consume.",
+            solution: "The Automation Opportunity Analyser evaluates how a process currently works, estimates its manual workload and identifies areas where software automation may improve the workflow.",
             features: [
-                "SQL query analysis",
-                "Performance issue detection",
-                "Inefficient pattern detection",
-                "Query complexity analysis",
-                "Optimisation recommendations",
-                "Readable analysis results"
+                "Business process analysis",
+                "Manual workload calculation",
+                "Estimated annual process cost",
+                "Automation potential assessment",
+                "Workflow analysis",
+                "Automation recommendations",
+                "Potential time-saving estimates",
+                "Personalised automation enquiry"
             ],
             technologies: [
-                "Python",
-                "SQL",
                 "JavaScript",
-                "FastAPI"
+                "Python",
+                "FastAPI",
+                "Automation"
             ],
             categories: ["ai"],
         }
@@ -334,12 +336,52 @@ if (featuredtoolsContainer) {
 }
 
 // FILTER
+let activeFilter = "all";
+let searchTerm = "";
+
+const searchInput = document.getElementById("search");
 const filterButtons = document.querySelectorAll(".tool-filter-button");
+
+function updateTools () {
+
+    const filteredTools = tools.filter((tool) => {
+
+        // Does it match the selected category?
+        const matchesFilter = 
+        activeFilter === "all" ||
+        tool.card.categories.includes(activeFilter);
+
+        // Everything we want the search bar to search
+        const searchableText = [
+            tool.card.title,
+            tool.card.description,
+            ...tool.card.technologies,
+            ...tool.card.categories
+        ]
+        .join(" ")
+        .toLowerCase();
+
+        // Does it match what the user typed?
+        const matchesSearch =
+            searchTerm === "" ||
+            searchableText.includes(searchTerm);
+
+            return matchesFilter && matchesSearch;
+
+    });
+
+    if (toolsContainer) {
+        rendertools(
+            filteredTools,
+            toolsContainer
+        );
+    }
+}
 
 filterButtons.forEach((button) => {
     button.addEventListener("click", () => {
         
-        const filter = button.dataset.filter;
+        activeFilter = button.dataset.filter;
 
         // active
         filterButtons.forEach((btn) => {
@@ -348,23 +390,20 @@ filterButtons.forEach((button) => {
 
         button.classList.add("active");
 
-        // filter tools
-        const filteredtools = 
-        filter === "all"
-        ? tools
-        : tools.filter((tool) =>
-            tool.card.categories.includes(filter)
-        );
-        
-        // Render into tools container
-        if (toolsContainer) {
-            rendertools(
-                filteredtools,
-                toolsContainer
-            );
-        }
+        updateTools();
     });
 });
+
+if (searchInput) {
+    searchInput.addEventListener("input", () => {
+
+        searchTerm = searchInput.value
+        .trim()
+        .toLowerCase();
+
+        updateTools();
+    });
+}
 
 //dropdown to filter projects logic
 const urlParams = new URLSearchParams(window.location.search);
