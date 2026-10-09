@@ -42,89 +42,94 @@ const tools = [
                 "FastAPI",
                 "Automation"
             ],
-            categories: ["ai"],
+            demoUrl: "automation-analyser.html"
         }
     },
 
     {
-        id: "LogAnalyser",
+        id: "SpreadsheetAnalyser",
 
         card: {
             icon: {
-                lucide: "file-code",
+                lucide: "table-properties",
                 baseClass: "icon",           
-                className: "file-code_icon"
+                className: "spreadsheet_icon"
             },
-            title: "Log Analyser",
-            description: "Analyse application and server logs to identify errors, warnings and recurring operational problems.",            
-            technologies: ["Python", "Logs", "Automation"],
-            categories: ["automation", "infrastructure"],
+            title: "Smart Spreadsheet Analyser",
+            description: "Analyse Excel and CSV data to uncover useful insights, identify data-quality issues and discover opportunities for automation.",            
+            technologies: ["Python","Pandas","Excel"],
+            categories: ["data-analytics"],
             image: "../images/workflow-automation-platform.png",
             status: "In Development",
             featured: true,
         },
 
         modal: {    
-            title: "Log Analyser",
-            description: "Analyse application and server logs to quickly identify errors, warnings and recurring operational problems.",
-            problem: "Application and server logs can contain thousands of entries, making it difficult to manually identify important errors, repeated failures and patterns affecting system reliability.",
-            solution: "The Log Analyser processes log data, identifies important events and groups recurring issues so that problems can be investigated more quickly.",
+            title: "Smart Spreadsheet Analyser",
+            description: "A spreadsheet analysis tool designed to transform raw business data into useful insights while identifying common data-quality problems.",
+            problem: "Businesses frequently depend on spreadsheets containing inconsistent formatting, duplicate records, missing values and large amounts of information that can be difficult to analyse manually.",
+            solution: "The Smart Spreadsheet Analyser examines uploaded spreadsheet data, identifies potential data-quality issues and generates useful summaries to help businesses understand their information and identify repetitive processes that could be automated.",
             features: [
-                "Log file analysis",
-                "Error detection",
-                "Warning detection",
-                "Recurring issue detection",
-                "Error frequency analysis",
-                "Log filtering",
-                "Summary generation"
+                "Excel and CSV file upload",
+                "Automatic data structure analysis",
+                "Duplicate record detection",
+                "Missing value identification",
+                "Data-quality assessment",
+                "Statistical summaries",
+                "Charts and visualisations",
+                "Analysis results export"
             ],
             technologies: [
                 "Python",
-                "JavaScript",
+                "Pandas",
                 "FastAPI",
-                "Regular Expressions"  
+                "JavaScript",
+                "HTML",
+                "CSS" 
             ]
         },
     },
 
     {
-        id: "DatabaseHealthChecker",
+        id: "DocumentAnalyser",
 
         card: {
             icon: {
-                lucide: "monitor",
+                lucide: "scan-text",
                 baseClass: "icon",           
-                className: "monitor_icon"
+                className: "document_icon"
             },
-            title: "Database Health Checker",
-            description: "Analyse database diagnostic information and identify performance, storage and availability issues.",            
-            technologies: ["Oracle", "SQL", "Monitoring"],
-            categories: ["database"],
+            title: "Document Workflow Analyser",
+            description: "Analyse business documents to identify important information, detect missing details and explore document automation opportunities.",            
+            technologies: ["Python", "Documents", "Automation"],
+            categories: ["documents"],
             image: "../images/business-analytics-dashboard.png",
             status: "In Development",
             featured: true
         },
 
         modal: {
-            title: "Database Health Checker",
-            description: "Analyse database diagnostic information to identify performance, storage and availability issues.",
-            problem: "Database problems can develop across multiple areas including storage, sessions, waits, blocking and resource utilisation. Reviewing these areas individually can make health checks slow and inconsistent.",
-            solution: "The Database Health Checker analyses database diagnostic information and presents important findings through a simple health report with warnings and recommended areas for investigation.",
+            title: "Document Workflow Analyser",
+            description: "A document analysis tool that examines business documents, identifies important information and demonstrates opportunities for automated document processing.",
+            problem: "Businesses often spend significant time manually reviewing invoices, forms and other documents, extracting important information and transferring it into spreadsheets or internal systems.",
+            solution: "The Document Workflow Analyser processes uploaded documents, identifies relevant fields and highlights how document information could be extracted, validated and organised automatically.",
             features: [
-                "Database health overview",
-                "Storage utilisation checks",
-                "Session analysis",
-                "Blocking session detection",
-                "Performance warning detection",
-                "Database wait analysis",
-                "Health score",
-                "Recommended actions"
+                "Business document upload",
+                "Document content analysis",
+                "Important field identification",
+                "Missing information detection",
+                "Structured data extraction",
+                "Document processing summaries",
+                "Automation opportunity recommendations",
+                "Structured data export"
             ],
             technologies: [
-                "Oracle",
-                "SQL",
                 "Python",
-                "FastAPI"
+                "FastAPI",
+                "JavaScript",
+                "Document Processing",
+                "HTML",
+                "CSS"
             ]
         }   
     }];

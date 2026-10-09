@@ -121,24 +121,59 @@ TOOLS SEARCH
 FILTER BUTTONS 
 ========================================*/
 
-/* ALL */
 .all-tool svg {
-    color: red;
+    color: #ff7062;
 }
 
-/* DATABASE */
-.database-tool svg {
-    color: #3b82f6;
-}
-
-/* AUTOMATION */
 .automation-tool svg {
     color: #8b5cf6;
 }
 
-/* INFRASTRUCTURE */
-.infrastructure-tool svg {
+.analytics-tool svg {
+    color: #3b82f6;
+}
+
+.documents-tool svg {
     color: #22a06b;
+}
+
+/* Keep selected icon white */
+
+.tool-filter button.active svg {
+    color: #ffffff;
+}
+
+.automation_icon {
+    background: #f3e8ff;
+    color: #9333ea;
+}
+
+.automation_icon svg {
+    color: #9333ea;
+}
+
+
+/* Smart Spreadsheet Analyser - BLUE */
+
+.spreadsheet_icon {
+    background: #dbeafe;
+    color: #2563eb;
+}
+
+.spreadsheet_icon svg {
+    color: #2563eb;
+}
+
+
+/* Document Workflow Analyser - GREEN */
+
+.document_icon {
+    background: #dcfce7;
+    color: #16a34a;
+}
+
+.document_icon svg {
+    color: #16a34a;
 }
 /* ========================================
 Featured tools

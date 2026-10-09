@@ -4,138 +4,134 @@ console.log("Projects loaded")
 
 const projects = [
     {
-        id: "AIBusinessAssistant",
+        id: "ClientOperationsPlatform",
 
         card: {
             icon: {
-                lucide: "database",
+                lucide: "briefcase-business",
                 baseClass: "icon",           
-                className: "database_icon"
+                className: "operations_icon"
             },
-            title: "AI Business Assistant",
-            description: "An intelligent AI-powered assistant designed to automate repetitive business tasks, improve productivity and reduce manual work across an organisation.",            
-            technologies: ["Python", "JavaScript", "AI"],
-            categories: ["ai"],
+            title: "Smart Client Operations Platform",
+            description: "An integrated business management platform designed to automate customer enquiries, quotations, bookings and administrative workflows.",            
+            technologies: ["Python", "FastAPI", "SQL"],
+            categories: ["automation"],
             image: "../images/ai-business-assistant.png",
             status: "In Development",
             featured: true,
         },
 
         modal: {
-            title: "AI Business Assistant",
-            description: "An intelligent AI-powered assistant designed to automate repetitive business tasks, improve productivity and reduce manual work across an organisation.",
-            problem: "Small businesses spend hours every week answering repetitive emails, processing documents, creating reports and searching for information. These tasks reduce productivity and take time away from higher-value work.",
-            solution: "The AI Business Assistant uses large language models and intelligent workflows to automate common business tasks while remaining easy to use through a modern web interface.",
+            title: "Smart Client Operations Platform",
+            description: "A business operations system designed to streamline customer management, automate administrative processes and connect important workflows in one platform.",
+            problem: "Many service businesses manage customer enquiries, quotations, appointments and invoices using separate spreadsheets, emails and manual processes. This can result in duplicated work, missed information and inefficient communication.",
+            solution: "The Smart Client Operations Platform brings these processes together into a centralised system, allowing businesses to manage customer information, generate quotations, schedule work and automate routine communications.",
             features: [
-                "AI-powered chat assistant",
-                "Document summarisation",
-                "Email drafting",
-                "Task automation",
-                "User authentication",
-                "Admin dashboard",
-                "Analytics",
-                "Secure API integration",
+                "Customer enquiry management",
+                "Customer information database",
+                "Automated quotation generation",
+                "Booking and appointment scheduling",
+                "Job and task tracking",
+                "Invoice generation",
+                "Automated email notifications",
+                "Business operations dashboard"
             ],
             technologies: [
                 "Python",
                 "FastAPI",
                 "JavaScript",
+                "SQL",
+                "REST APIs",
                 "HTML",
-                "CSS",
-                "PostgreSQL",
-                "OpenAI API",
-                "Docker"
+                "CSS"
             ],
-            categories: ["ai"],
         }
     },
 
     {
-        id: "WorkflowAutomationPlatform",
+        id: "AutomatedReportingSystem",
 
         card: {
             icon: {
-                lucide: "file-code",
+                lucide: "chart-column-increasing",
                 baseClass: "icon",           
-                className: "file-code_icon"
+                className: "reporting_icon"
             },
-            title: "Workflow Automation Platform",
-            description: "A platform designed to automate repetitive business processes by connecting applications, APIs and internal workflows through a modern visual interface.",            
-            technologies: ["Python", "API", "Integration"],
-            categories: ["automation"],
+            title: "Automated Reporting System",
+            description: "A reporting platform designed to automatically process business data, calculate key metrics and generate recurring reports.",            
+            technologies: [ "Python", "Pandas", "Analytics"],
+            categories: ["analytics"],
             image: "../images/workflow-automation-platform.png",
             status: "In Development",
             featured: true,
         },
 
         modal: {    
-            title: "Workflow Automation Platform",
-            description: "A platform designed to automate repetitive business processes by connecting applications, APIs and internal workflows through a modern visual interface.",
-            problem: "Businesses often rely on manual processes to transfer information between systems, leading to wasted time, inconsistent data and avoidable human error.",
-            solution: "The Workflow Automation Platform enables businesses to create automated workflows that connect applications, trigger actions and manage business processes without repetitive manual intervention.",
+            title: "Automated Reporting System",
+            description: "An automated reporting solution designed to replace repetitive spreadsheet processing and manual report creation with a streamlined reporting workflow.",
+            problem: "Businesses often spend hours collecting information from multiple spreadsheets, calculating performance metrics, creating charts and preparing recurring management reports.",
+            solution: "The Automated Reporting System processes business data, performs calculations, generates visualisations and produces structured reports that can be created and distributed automatically.",
             features: [
-                "Visual workflow builder",
-                "API integrations",
-                "Email automation",
-                "Scheduled workflows",
-                "Conditional logic",
-                "Error handling",
-                "Notifications",
-                "Workflow History"
+                 "Excel and CSV data imports",
+                "Automated data processing",
+                "Data validation",
+                "KPI calculations",
+                "Interactive charts",
+                "PDF and Excel report generation",
+                "Scheduled reporting",
+                "Automated email delivery"
             ],
             technologies: [
                 "Python",
-                "JavaScript",
+                "Pandas",
                 "FastAPI",
-                "REST APIs",
-                "Docker",
-                "PostgreSQL",
-                "Redis"   
+                "JavaScript",
+                "SQL",
+                "Data Visualisation"
             ]
         },
     },
 
     {
-        id: "BusinessAnalyticsDashboard",
+        id: "DocumentProcessingSystem",
 
         card: {
             icon: {
-                lucide: "monitor",
+                lucide: "files",
                 baseClass: "icon",           
-                className: "monitor_icon"
+                className: "processing_icon"
             },
-            title: "Business Analytics Dashboard",
-            description: "A modern analytics platform providing interactive dashboards, KPI monitoring and reporting to help businesses make informed decisions from their operational data.",            
-            technologies: ["Python", "Dashboards", "Data"],
-            categories: ["analytics"],
+            title: "Intelligent Document Processing System",
+            description: "A document automation platform designed to extract, validate and organise information from invoices, forms and business records.",            
+            technologies: ["Python", "Automation", "SQL"],
+            categories: ["software"],
             image: "../images/business-analytics-dashboard.png",
             status: "In Development",
             featured: true
         },
 
         modal: {
-            title: "Business Analytics Dashboard",
-            description: "A modern analytics platform providing interactive dashboards, KPI monitoring and reporting to help businesses make informed decisions from their operational data.",
-            problem: "Business information is often scattered across multiple systems, making it difficult to identify trends, monitor performance and make timely decisions.",
-            solution: "The Business Analytics Dashboard centralises data into a single platform where users can monitor performance through interactive charts, reports and custom dashboards.",
+            title: "Intelligent Document Processing System",
+            description: "An end-to-end document processing platform designed to reduce manual data entry and streamline document-driven business workflows.",
+            problem: "Businesses frequently receive large volumes of documents that require manual review, information extraction, validation and data entry. These repetitive activities can be time-consuming and prone to errors.",
+            solution: "The Intelligent Document Processing System automates document intake, extracts relevant information, validates important fields and organises the results into structured records for review or further processing.",
             features: [
-                "Interactive dashboards",
-                "KPI monitoring",
-                "Custom reports",
-                "Data visualisation",
-                "Export to PDF/Excel",
-                "User roles",
-                "Alerts",
-                "Responsive design"
+                 "Document intake and uploads",
+                "Automatic information extraction",
+                "Field validation",
+                "Missing information detection",
+                "Document review interface",
+                "Approval workflows",
+                "Structured data storage",
+                "Data export and integration"
             ],
             technologies: [
-                "Python",
+                 "Python",
+                "FastAPI",
                 "JavaScript",
-                "Chart.js",
-                "HTML",
-                "CSS",
-                "PostgreSQL",
-                "FastAPI"
+                "SQL",
+                "Document Processing",
+                "REST APIs"
             ]
         }   
     }];
@@ -396,7 +392,7 @@ function updateProjects () {
 filterButtons.forEach((button) => {
     button.addEventListener("click", () => {
         
-        const filter = button.dataset.filter;
+        activeFilter = button.dataset.filter;
 
         // active
         filterButtons.forEach((btn) => {

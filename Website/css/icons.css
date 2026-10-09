@@ -161,3 +161,36 @@
 .project-button {
     margin-top: auto;
 }
+
+.operations_icon {
+    background: #f3e8ff;
+    color: #9333ea;
+}
+
+.operations_icon svg {
+    color: #9333ea;
+}
+
+
+/* Automated Reporting System - BLUE */
+
+.reporting_icon {
+    background: #dbeafe;
+    color: #2563eb;
+}
+
+.reporting_icon svg {
+    color: #2563eb;
+}
+
+
+/* Intelligent Document Processing System - GREEN */
+
+.processing_icon {
+    background: #dcfce7;
+    color: #16a34a;
+}
+
+.processing_icon svg {
+    color: #16a34a;
+}

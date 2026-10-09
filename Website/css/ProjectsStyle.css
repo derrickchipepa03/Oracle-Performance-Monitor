@@ -159,19 +159,31 @@ PROJECTS SEARCH
 FILTER BUTTONS 
 ========================================*/
 .all-project svg {
-    color: red;
+    color: #ff7062;
 }
 
-.ai-project svg {
-    color: #8b5cf6;
-}
+/* SOFTWARE - BLUE */
 
-.automation-project svg {
+.software-project svg {
     color: #3b82f6;
 }
 
+/* AUTOMATION - PURPLE */
+
+.automation-project svg {
+    color: #8b5cf6;
+}
+
+/* ANALYTICS - GREEN */
+
 .analytics-project svg {
     color: #22a06b;
+}
+
+/* Keep icons white when selected */
+
+.project-filter-button.active svg {
+    color: #ffffff;
 }
 
 /* ========================================
