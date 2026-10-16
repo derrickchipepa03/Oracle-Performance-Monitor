@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+    <meta
+        name="keywords"
+        content="Oracle, SQL, Python, Automation, Software"
+    >
+    <meta
+        name="description"
+        content="Operational Intelligence Platform - Business automation and Oracle monitoring tools."
+    >
+
+    <title>Operational Intelligence Platform</title>
+    <link rel="stylesheet" href="../css/HomeStyle.css">
+    <link rel="stylesheet" href="../css/ProjectsStyle.css">
+    <link rel="stylesheet" href="../css/project-card.css">
+    <script src="../js/projects.js" defer></script>
+    <script src="../js/icons.js" defer></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="../css/services.css">
+    <link rel="stylesheet" href="../css/icons.css">
+    <link rel="stylesheet" href="../css/modal.css">
+    <link rel="stylesheet" href="../css/explore_projects.css">
+    
+</head>
+<body>
+    <header class="site-header" id="site-header">
+        <nav class="navbar">
+            <div class="navbar__container">
+                <a href="Home.html" id="navbar__logo">
+                    <i data-lucide="code-xml"></i>
+                    <div class="navbar__brand-text">
+                    <span>Business Automation Solutions</span>
+                    <small>Automate. Optimise. Build Better.</small>
+                    </div>
+                </a>
+                <button
+                    class="navbar__toggle"
+                    id="mobile-menu"
+                    type="button"
+                    aria-label="Open navigation menu"
+                >
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+    
+                <ul class="navbar__menu">
+                    <li class="navbar__item">
+                        <a href="home.html" class="navbar__links">
+                            Home
+                        </a>
+                    </li>
+
+                    <li class="navbar__item">
+                        <a href="tools.html" class="navbar__links active">
+                            Services
+                        </a>
+                    </li>
+
+                    <li class="navbar__item">
+                        <a href="projects.html" class="navbar__links">
+                            Projects
+                        </a>
+                    </li>
+    
+                    <li class="navbar__item">
+                        <a href="tools.html" class="navbar__links">
+                            Tools
+                        </a>
+                    </li>
+
+                    <li class="navbar__item">
+                        <a href="contact.html" class="navbar__links">
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+                <div class="navbar__btn">
+                    <a href="#featured-products" class="button">
+                        Learn More
+                    </a>
+                </div>
+            </div>
+        </nav>
+    
+        <nav class="dropdown-bar">
+            <div class="dropdown-bar-container">
+    
+                <div class="dropdown">
+                    <button class="dropdown-trigger">
+                        Automation
+                        <span>⌄</span>
+                    </button>
+                    <div class="dropdown-menu">
+                        <a href="projects.html?project=ClientOperationsPlatform">
+                            Client Operations Platform
+                        </a>
+                        <a href="tools.html?tool=AutomationAnalyser">
+                            Automation Opportunity Analyser
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="projects.html?filter=automation" class="view-all">    
+                            View Automation Projects →
+    
+                        </a>
+                    </div>
+                </div>
+    
+                <div class="dropdown">
+                    <button class="dropdown-trigger">
+                        Data & Reporting
+                        <span>⌄</span>
+                    </button>
+                    <div class="dropdown-menu">
+                        <a href="projects.html?project=AutomatedReportingSystem">
+                            Automated Reporting System
+                        </a>
+                        <a href="tools.html?tool=SpreadsheetAnalyser">
+                            Smart Spreadsheet Analyser
+                        </a>
+                        <a href="#demo-tools">
+                            CSV Data Checker
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="projects.html?filter=analytics" class="view-all">
+                            View Data Projects →    
+                        </a>
+                    </div>
+                </div>
+    
+                <div class="dropdown">
+                    <button class="dropdown-trigger">
+                        Documents Software
+                        <span>⌄</span>
+                    </button>
+                    <div class="dropdown-menu">
+                        <a href="projects.html?project=DocumentProcessingSystem">
+                            Document & Processing System
+                        </a>
+                        <a href="tools.html?tool=DocumentAnalyser">
+                            Document Workflow Analyser
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="projects.html?filter=software" class="view-all">
+                            View Software Projects →   
+                        </a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropdown-trigger">
+                        Developer Tools
+                        <span>⌄</span>
+                    </button>
+                    <div class="dropdown-menu">
+                        <a href="#demo-tools">
+                            SQL Formatter
+                        </a>
+                        <a href="#demo-tools">
+                            JSON Formatter & Validator
+                        </a>
+                        <a href="#demo-tools">
+                            Log Analyser
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#demo-tools" class="view-all">
+                            View Demo Tools →
+                        </a>
+                    </div>
+                </div>
+                <div class="dropdown-search">
+                    <i data-lucide="search"></i>
+                    <input
+                    type="search"
+                    id="header-search"
+                    placeholder="Search..."
+                    aria-label="Search website">
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="services-container">
+            <div class="services-header">
+                <span class="services-label">SERVICES</span>
+                <h1>Software built around how your business works</h1>
+                <p>
+                    Practical automation, custom software and data solutions
+                    designed to reduce manual work and improve the way your
+                    business runs.
+                </p>
+            </div>
+
+            <div class="services-hero__buttons">
+                <a href="Contact.html" class="services-primary-button">
+                    Get in touch →
+                </a>
+                <a href="Projects.html" class="services-secondary-button">
+                    View projects
+                </a>
+            </div>
+
+        </section>
+
+        <section class="services-list"></section>
+
+        <section class="common-problems">
+        <div class="common-problems__container">
+            <div class="common-problems__heading">
+                <span class="section-label">COMMON PROBLEMS</span>
+
+                <h2>Does any of this sound familiar?</h2>
+
+                <p>
+                    Everyday processes can take up many hours of our valuable time
+                </p>
+            </div>
+
+            <div class="problems-grid">
+
+                <article class="problem-card">
+                    <div class="problem-icon">
+                        <i data-lucide="clock-3"></i>
+                    </div>
+                    <div class="problem-card__content">
+                        <h3>Repetitive admin</h3>
+                        <p>Too much time spent repeating the same manual tasks.</p>
+                    </div>
+                </article>
+
+                <article class="problem-card">
+                    <div class="problem-icon">
+                        <i data-lucide="chart-no-axes-combined"></i>
+                    </div>
+                    <div class="problem-card__content">
+                        <h3>Manual reporting</h3>
+                        <p>Reports take hours to prepare and update every time.</p>
+                    </div>
+                </article>
+
+                <article class="problem-card">
+                    <div class="problem-icon">
+                        <i data-lucide="files"></i>
+                    </div>
+                    <div class="problem-card__content">
+                        <h3>Manual document handling</h3>
+                        <p>Documents are processed, checked or organised by hand.</p>
+                    </div>
+                </article>
+
+                <article class="problem-card">
+                    <div class="problem-icon">
+                        <i data-lucide="sheet"></i>
+                    </div>
+                    <div class="problem-card__content">
+                        <h3>Too many spreadsheets</h3>
+                        <p>Important processes depend on multiple spreadsheets.</p>
+                    </div>
+                </article>
+
+                <article class="problem-card">
+                    <div class="problem-icon">
+                        <i data-lucide="repeat-2"></i>
+                    </div>
+                    <div class="problem-card__content">
+                        <h3>Repeated daily tasks</h3>
+                        <p>The same work has to be completed again and again.</p>
+                    </div>
+                </article>
+
+                <article class="problem-card">
+                    <div class="problem-icon">
+                        <i data-lucide="unplug"></i>
+                    </div>
+                    <div class="problem-card__content">
+                        <h3>Disconnected systems</h3>
+                        <p>Information has to be manually moved between different tools.</p>
+                    </div>
+                </article>
+                
+            </div>
+
+            <div class="problem-card__footer"></div>
+        </div>
+
+    </section>
+
+        <section class="services-process"></section>
+
+        <section class="cta-section">
+            <div class="cta-container">
+                <div class="cta-icon">
+                    <i data-lucide="lightbulb"></i>
+                </div>
+                <div class="cta-text">
+                    <h2>Have an idea?</h2>
+                    <p>
+                        Have an idea or want to know more about projects and tools we offer?
+                        Send us an email and we can discuss options.                      
+                    </p>
+                </div>
+                <a href="../html/contact.html" class="cta-button">
+                    Get in touch → 
+                </a>
+            </div>
+        </section>
+
+        <footer class="footer">
+        <div class="footer-main">
+            <div class="footer-brand">
+                <a href="Home.html" id="footer-logo">
+                    <i data-lucide="code-xml"></i>
+                    <span>Business Automation Solutions</span>
+                </a>
+
+                <p>Automate. Optimise. Build Better.</p>
+            </div>
+                
+                <div class="footer-column">
+                    <h4>Explore</h4>
+                    <a href="../HTML/Projects.html">Projects</a>
+                    <a href="../HTML/Tools.html">Tools</a>
+                    <a href="../HTML/Contact.html">Contact</a>
+                </div>
+
+                 <div class="footer-column">
+                    <h4>Connect</h4>
+                    <a href="#">GitHub</a>
+                    <a href="#">LinkedIn</a>
+                    <a href="#">Email</a>
+                </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 Operational Intelligence Platform.
+                All rights reserved.
+            </p>
+            <p>HTML • CSS • JavaScript</p>
+            <p>Built by Derrick</p>
+        </div>
+    </footer>
+    <div class = "modal-overlay hidden" id="project-modal">
+        <div class = "modal" role="dialog" aria-modal="true">
+
+            <button
+                class="modal-close"
+                id="modal-close"
+                type="button"
+                aria-label="Close Modal" 
+            >
+                &times;
+            </button>
+
+            <div class="modal-header">
+                <span class="modal-label">PROJECTS</span>
+                <h2 id ="modal-title"></h2>
+                <p id="modal-description" class="modal-description"></p>
+
+                <div class="modal-meta">
+                    <div id="modal-tags" class="modal-tags"></div>
+
+                    <span class="modal-status">
+                        <span class="status-dot"></span>
+                            In Development
+                    </span>     
+                </div>
+            </div>    
+
+            <div class="modal-divider"></div>
+
+            <div class="modal-section">
+                <span class="modal-section-label">THE PROBLEM</span>
+                <p id="modal-problem"></p>
+            </div>
+                
+            <div class="modal-section">
+                <span class="modal-section-label">THE SOLUTION</span>
+                <p id="modal-solution"></p>
+            </div>
+                
+            <div class="modal-divider"></div>
+
+            <div class="modal-details">
+
+                <div class="modal-section">
+                    <span class="modal-section-label">KEY FEATURES</span>
+                    <ul id="modal-features" class="modal-features"></ul>
+                </div>
+            </div>
+
+            <div class="modal-section">
+                <span class="modal-section-label">TECHNOLOGIES</span>
+                <div
+                    id="modal-technologies"
+                    class="modal-technologies"
+                ></div>
+            </div>
+    
+            <div class="modal-footer">
+                <button class="modal-primary-button">
+                    Try tool →
+                </button>
+
+                <a href="#" class="modal-github">
+                    View on GitHub ↗
+                </a>
+            </div>
+        </div>
+    </div>
+    </main>
+</body>
+</html>

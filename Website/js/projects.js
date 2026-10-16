@@ -17,7 +17,7 @@ const projects = [
             technologies: ["Python", "FastAPI", "SQL"],
             categories: ["automation"],
             image: "../images/ai-business-assistant.png",
-            status: "In Development",
+            status: "Planned",
             featured: true,
         },
 
@@ -62,7 +62,7 @@ const projects = [
             technologies: [ "Python", "Pandas", "Analytics"],
             categories: ["analytics"],
             image: "../images/workflow-automation-platform.png",
-            status: "In Development",
+            status: "Planned",
             featured: true,
         },
 
@@ -106,7 +106,7 @@ const projects = [
             technologies: ["Python", "Automation", "SQL"],
             categories: ["software"],
             image: "../images/business-analytics-dashboard.png",
-            status: "In Development",
+            status: "Planned",
             featured: true
         },
 
@@ -185,6 +185,7 @@ window.addEventListener("scroll", () => {
 function createProjectCard(project){
     const card = document.createElement("article");
     card.classList.add("project-card");
+    card.classList.add(`project-${project.id}`);
 
     // IMAGE
 

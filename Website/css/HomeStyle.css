@@ -575,35 +575,23 @@ main {
     letter-spacing: -0.03em;
 }
 
+/* TEXT */
+
 .about-intro {
-    margin-bottom: 12px;
-    color: #333;
-    font-size: 1.05rem;
-    font-weight: 500;
-    line-height: 1.7;
+    max-width: 560px;
+    margin: 0 0 14px;
+    color: #222222;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.65;
 }
 
 .about-description {
-    color: #666;
-    font-size: 0.95rem;
-    line-height: 1.7;
-}
-
-.about-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin: 24px 0;
-}
-
-.about-tags span {
-    padding: 7px 13px;
-    background: #fff0ee;
-    border: 1px solid #ffd6d1;
-    border-radius: 20px;
-    color: #d9574c;
-    font-size: 0.78rem;
-    font-weight: 600;
+    max-width: 570px;
+    margin: 0;
+    color: #626262;
+    font-size: 16px;
+    line-height: 1.75;
 }
 
 /* SKILL TAGS */
@@ -611,18 +599,26 @@ main {
 .about-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
-    margin: 24px 0;
+    gap: 12px;
+    margin: 30px 0 34px;
 }
 
 .about-tags span {
-    padding: 7px 13px;
-    background: #fff0ee;
-    border: 1px solid #ffd6d1;
-    border-radius: 20px;
-    color: #d9574c;
-    font-size: 0.78rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 14px;
+    border: 1px solid #ffd7d2;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.75);
+    color: #d65347;
+    font-size: 13px;
     font-weight: 600;
+}
+
+.about-tags svg {
+    width: 16px;
+    height: 16px;
 }
 
 /* BUTTONS */
@@ -763,7 +759,7 @@ main {
 .link--sql-tools {
     background: #ff7062;
     position: relative;
-    top: 120px;
+    top: 95px;
 }
 
 .link--db-tools {
@@ -775,13 +771,13 @@ main {
 .link--Analyser-tools {
     background: #ff7062;
     position: relative;
-    top: 120px;
+    top: 95px;
 }
 
 .link--query-tools {
     background: #ff7062;
     position: relative;
-    top: 120px;
+    top: 70px;
 }
 
 .link:hover {
@@ -810,14 +806,15 @@ main {
 }
 
 .link--tools1 {
-    background: white;
+    background: #ff7062;
+    color: white;
     border: 1px solid black;
     position: relative;
     bottom: 0px;
 }
 
 .link1:hover {
-    color: #ff7062;
+    color: black;
 }
 
 .tags {
@@ -939,212 +936,6 @@ main {
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
     width: 100%;
-}
-
-.project-card {
-    display: flex;
-    flex-direction: column;
-    min-width: 0;
-    min-height: 480px;
-    padding: 0;
-    overflow: hidden;
-    background: #ffffff;
-    border: 1px solid #e6e6e6;
-    border-radius: 14px;
-    color: #131313;
-    cursor: pointer;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
-    transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease;
-}
-
-.project-card h3 {
-    margin-bottom: 15px;
-    font-size: 1.4rem;
-}
-
-.project-card:hover {
-    transform: translateY(-6px);
-    box-shadow:
-        0 18px 40px rgba(0, 0, 0, 0.10);
-}
-
-.project-card__tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 20px;
-}
-
-.project-card__span {
-    padding: 5px 10px;
-    border-radius: 6px;
-    background: #f1f1f1;
-    font-size: 0.8rem;
-}
-
-.project-card__link {
-    margin-top: 24px;
-    border: none;
-    background: transparent;
-    color: #ff7062;
-    font-weight: 700;
-    cursor: pointer;
-    margin-left: 700px;
-}
-
-.project-card__top {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    margin-bottom: 14px;
-}
-
-.tools .project-card {
-    min-height: 360px;
-}
-.project-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-    flex-shrink: 0;
-}
-
-.project-description {
-    margin: 0;
-    line-height: 1.6;
-    color:#555;
-}
-
-.project-technologies {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-}
-
-.project-technologies span {
-    padding: 5px 10px;
-    border-radius: 20px;
-    background: #f3f3f3;
-    font-size: 0.8rem;
-}
-
-.project-button {
-    width: 100%;
-    margin-top: auto;
-    padding: 11px 16px;
-
-    border: 0;
-    border-radius: 7px;
-
-    background: #ff7062;
-    color: white;
-
-    font-weight: 600;
-    cursor: pointer;
-
-    transition:
-        background .2s ease,
-        transform .2s ease;
-}
-
-.project-button:hover {
-    background: #f45f52;
-    transform: translateY(-2px);
-}
-
-.front-image {
-    display: flex;
-}
-
-/* project image */
-.project-card__image {
-    position: relative;
-    display: block;
-    width: 100%;
-    height: 210px;
-    flex-shrink: 0;
-    overflow: hidden;
-    background: #eeeeee;
-}
-
-
-/* ACTUAL IMAGE */
-
-.project-card__image img {
-    display: block;
-
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-    object-position: center;
-
-    transition: transform 0.35s ease;
-}
-
-
-.project-card:hover .project-card__image img {
-    transform: scale(1.025);
-}
-
-
-/* ========================================
-   STATUS BADGE
-   ======================================== */
-
-.project-card__status {
-    display: inline-flex;
-    align-items: center;
-    gap: 7px;
-    position: static;
-    width: fit-content;
-    padding: 6px 25px;
-    background: #fff7e6;
-    border: 1px solid #f3dfae;
-    border-radius: 20px;
-    color: #8a6517;
-    font-size: 0.7rem;
-    font-weight: 600;
-    opacity: 1;
-    visibility: visible;
-}
-
-
-.status-dot {
-    display: block;
-    width: 7px;
-    height: 7px;
-    flex-shrink: 0;
-    background: #e6a817;
-    border-radius: 50%;
-}
-
-
-.featured-project-card:hover .project-image img {
-    transform: scale(1.025);
-}
-
-/* =========================
-   CARD CONTENT
-   ========================= */
-
-.project-card__content {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    padding: 20px;
-}
-
-.project-card__content h3 {
-    margin: 0 0 8px;
-    color: #171717;
-    font-size: 1.1rem;
-    font-weight: 700;
-    line-height: 1.3;
 }
 
 /* what i build */
@@ -1316,57 +1107,83 @@ main {
 
 /* contact buttons */
 .about-buttons {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    position: relative;
-    top: 20px;
-}
-
-
-/* PRIMARY */
-
-.about-button--primary {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 12px 20px;
-    background: #ff7062;
-    border: 1px solid #ff7062;
-    border-radius: 6px;
-    color: #ffffff;
-    font-weight: 600;
+    min-height: 48px;
+    padding: 0 22px;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: 700;
     text-decoration: none;
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
 
-    transition: 0.2s ease;
+.about-button--primary {
+    background: #ff7062;
+    color: #ffffff;
+    border: 1px solid #ff7062;
 }
 
 .about-button--primary:hover {
-    background: #f45f52;
+    background: #f35f52;
     transform: translateY(-2px);
+    box-shadow:
+        0 8px 20px rgba(255, 112, 98, 0.22);
 }
 
-
-/* SECONDARY */
-
 .about-button--secondary {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 12px 20px;
-    background: transparent;
-    border: 1px solid #222222;
-    border-radius: 6px;
-    color: #222222;
-    font-weight: 600;
-    text-decoration: none;
-    transition: 0.2s ease;
+    background: #ffffff;
+    color: #111111;
+    border: 1px solid #cfcfcf;
 }
 
 .about-button--secondary:hover {
-    background: #222222;
-    color: #ffffff;
+    border-color: #ff7062;
+    color: #ff7062;
     transform: translateY(-2px);
+}
+
+/* IMAGE BADGE */
+
+.about-image-badge {
+    position: absolute;
+    left: 24px;
+    bottom: -28px;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 15px 18px;
+    background: #ffffff;
+    border: 1px solid #eeeeee;
+    border-radius: 12px;
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.about-image-badge > svg {
+    width: 22px;
+    height: 22px;
+    color: #ff7062;
+}
+
+.about-image-badge div {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.about-image-badge strong {
+    color: #111111;
+    font-size: 13px;
+}
+
+.about-image-badge span {
+    color: #777777;
+    font-size: 12px;
 }
 
 /* footer */
@@ -1711,4 +1528,5 @@ main {
 
         background: #131313;
     }
+    
 }

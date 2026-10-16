@@ -19,6 +19,8 @@
     <link rel="stylesheet" href="../css/HomeStyle.css">
     <script src="../js/projects.js" defer></script>
     <script src="../js/tools.js" defer></script>
+    <script src="../js/demotools.js" defer></script>
+    <link rel="stylesheet" href="../css/demotools.css">
     <script src="../js/icons.js" defer></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="../css/icons.css">
@@ -56,6 +58,13 @@
                         Home
                     </a>
                 </li>
+
+                <li class="navbar__item">
+                    <a href="services.html" class="navbar__links">
+                        Services
+                    </a>
+                </li>
+                
                 <li class="navbar__item">
                     <a href="projects.html" class="navbar__links">
                         Projects
@@ -87,67 +96,82 @@
 
             <div class="dropdown">
                 <button class="dropdown-trigger">
-                    AI & Automation
+                    Automation
                     <span>⌄</span>
                 </button>
                 <div class="dropdown-menu">
-                    <a href="../HTML/projects.html?project=AIBusinessAssistant">AI Business Assistant</a>
-                    <a href="../HTML/projects.html?project=WorkflowAutomationPlatform">Workflow Automation</a>
-                    <a href="../HTML/Tools.html?filter=all">AI Tools</a>
-
+                    <a href="projects.html?project=ClientOperationsPlatform">
+                        Client Operations Platform
+                    </a>
+                    <a href="tools.html?tool=AutomationAnalyser">
+                        Automation Opportunity Analyser
+                    </a>
                     <div class="dropdown-divider"></div>
-                        <a href="../HTML/projects.html?filter=ai" class="view-all">
-                            View all AI projects →
-                        </a>
-                </div>
-            </div>
+                    <a href="projects.html?filter=automation" class="view-all">    
+                        View Automation Projects →
 
-            <div class="dropdown">
-                <button class="dropdown-trigger">
-                    Databases
-                    <span>⌄</span>
-                </button>
-                <div class="dropdown-menu">
-                    <a href="../HTML/Tools.html?filter=database">Database Monitoring</a>
-                    <a href="../HTML/Tools.html?tool=SQLQueryAnalyser">SQL Performance</a>
-                    <a href="../HTML/Tools.html?filter=database">DB Health Checker</a>
-
-                <div class="dropdown-divider"></div>
-                    <a href="../HTML/Tools.html?filter=database" class="view-all">
-                        View all Database projects →
                     </a>
                 </div>
             </div>
 
             <div class="dropdown">
                 <button class="dropdown-trigger">
-                    Software
+                    Data & Reporting
                     <span>⌄</span>
                 </button>
                 <div class="dropdown-menu">
-                <a href="#">Web Applications</a>  
-                <a href="../HTML/projects.html?project=BusinessAnalyticsDashboard">Business Tools</a>   
-                <a href="#">APIs & Integrations</a>
+                    <a href="projects.html?project=AutomatedReportingSystem">
+                        Automated Reporting System
+                    </a>
+                    <a href="tools.html?tool=SpreadsheetAnalyser">
+                        Smart Spreadsheet Analyser
+                    </a>
+                    <a href="#demo-tools">
+                        CSV Data Checker
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <a href="projects.html?filter=analytics" class="view-all">
+                        View Data Projects →    
+                    </a>
+                </div>
+            </div>
 
-                <div class="dropdown-divider"></div>
-                    <a href="../HTML/projects.html?filter=automation" class="view-all">
-                        View all Software projects →
+            <div class="dropdown">
+                <button class="dropdown-trigger">
+                    Documents Software
+                    <span>⌄</span>
+                </button>
+                <div class="dropdown-menu">
+                    <a href="projects.html?project=DocumentProcessingSystem">
+                        Document & Processing System
+                    </a>
+                    <a href="tools.html?tool=DocumentAnalyser">
+                        Document Workflow Analyser
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <a href="projects.html?filter=software" class="view-all">
+                        View Software Projects →   
                     </a>
                 </div>
             </div>
             <div class="dropdown">
                 <button class="dropdown-trigger">
-                    Infrastructure
+                    Developer Tools
                     <span>⌄</span>
                 </button>
                 <div class="dropdown-menu">
-                <a href="#">System Monitoring</a>    
-                <a href="../HTML/Tools.html?tool=LogAnalyser">Log Analysis</a>
-                <a href="#">Linux & Servers</a>
-
-                <div class="dropdown-divider"></div>
-                    <a href="../HTML/projects.html?filter=infrastructure" class="view-all">
-                        View all Infrastructure projects →
+                    <a href="#demo-tools">
+                        SQL Formatter
+                    </a>
+                    <a href="#demo-tools">
+                        JSON Formatter & Validator
+                    </a>
+                    <a href="#demo-tools">
+                        Log Analyser
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <a href="#demo-tools" class="view-all">
+                        View Demo Tools →
                     </a>
                 </div>
             </div>
@@ -332,64 +356,15 @@
             </div>
         </section>
 
-        <section class="tools">
+        <section class="tools" id="demo-tools">
             <div class="section-container">
                 <div class="tools-text">
-                    <h2>Demo Tools</h2>
+                    <h2>Try the Demo Tools</h2>
                 </div>
-                <div class="tools-grid">
-                    <article class="tools project-card">
-                    <div class="icon square-code_icon">
-                        <i data-lucide="square-code"></i>
-                    </div>
-                    <h3>Sql formatter</h3>
-                    <p>
-                        Format and beautify your sql queries instantly.
-                    </p>
-                    <button class="link3 link--sql-tools">
-                        Open Tool → 
-                        </button>
-                    </article>
-
-                <article class="tools project-card">
-                    <div class="icon heart-pulse_icon">
-                        <i data-lucide="heart-pulse"></i>
-                    </div>
-                    <h3>DB Health Checker </h3>
-                    <p>
-                        Check the health of your databases in seconds.
-                    </p>
-                    <button class="link3 link--db-tools">
-                        Open Tool → 
-                        </button>
-                </article>
-
-                <article class="tools project-card">
-                    <div class="icon file_icon">
-                        <i data-lucide="file"></i>
-                    </div>
-                    <h3>Log Analyser</h3>
-                    <p>
-                        Analyse log files and detect issues automatically.
-                    </p>
-                    <button class="link3 link--Analyser-tools">
-                        Open Tool → 
-                        </button>
-                </article>
-
-                <article class="tools project-card">
-                    <div class="icon search_icon">
-                        <i data-lucide="search"></i>
-                    </div>
-                    <h3>Query Analyser</h3>
-                    <p>
-                        Analyse SQL queries and identify performance issues.
-                    </p>
-                    <button class="link3 link--query-tools">
-                        Open Tool → 
-                        </button>
-                </article>
-                </div>
+                <div 
+                    class="tools-grid"
+                    id="demo-tools-grid"
+                ></div>
             </div>
              <a href="../HTML/Tools.html" class="link1 link--tools1">
             Explore All Tools
@@ -405,21 +380,30 @@
                     Building software around automation, data & systems.
                 </h2>
 
-                <p class="about-description">
-                    Systems DBA with a passion for building software that helps businesses operate more efficiently.
+                <p class="about-intro">
+                    I'm a Systems DBA and software developer focused on
+                    automation, data and business software.
                 </p>
                 <p class="about-description">
-                    My experience spans database systems, infrastructure and software
-
-    development, giving me a practical approach to building reliable,
-
-    automated and data-driven solutions.
+                    My experience across database systems, infrastructure and
+                    software development gives me a practical approach to
+                    building reliable tools that reduce manual work, improve
+                    workflows and make better use of business data.
                 </p>
                 
                 <div class="about-tags">
-                    <span>Database Systems</span>
-                    <span>Automation</span>
-                    <span>Software Development</span>
+                    <span>
+                    <i data-lucide="database"></i>
+                    Database Systems
+                    </span>
+                    <span>
+                        <i data-lucide="workflow"></i>
+                        Automation
+                    </span>
+                    <span>
+                        <i data-lucide="code-xml"></i>
+                        Software Development
+                    </span>
                 </div>
                 
                 <p>
@@ -443,6 +427,8 @@
             </div>
             <div class="block">
                 <img src="/Website/images/image.png" alt="Business automation workspace">
+            </div>
+           
             </div>
         </section>
     </main>

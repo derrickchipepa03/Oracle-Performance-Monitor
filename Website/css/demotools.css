@@ -1,0 +1,134 @@
+/* =========================
+   DEMO TOOLS
+========================= */
+
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+    width: 100%;
+}
+
+
+/* CARD */
+
+.demo-tool-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    padding: 28px;
+    min-height: 310px;
+    display: flex;
+    flex-direction: column;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+.demo-tool-card:hover {
+    transform: translateY(-5px);
+    border-color: #ff7062;
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+
+/* ICON */
+
+.demo-tool-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+}
+
+
+.demo-tool-icon svg {
+    width: 23px;
+    height: 23px;
+}
+
+
+/* SQL */
+
+.demo-tool-icon.square-code_icon {
+    background: #fff0ee;
+    color: #ff7062;
+}
+
+
+/* JSON */
+
+.demo-tool-icon.json_icon {
+    background: #f6edff;
+    color: #a855f7;
+}
+
+
+/* LOG */
+
+.demo-tool-icon.file_icon {
+    background: #ecf9ef;
+    color: #22a06b;
+}
+
+
+/* CSV */
+
+.demo-tool-icon.csv_icon {
+    background: #edf5ff;
+    color: #3b82f6;
+}
+
+
+/* TITLE */
+
+.demo-tool-card h3 {
+    font-size: 21px;
+    font-weight: 700;
+    margin: 0 0 14px;
+    line-height: 1.3;
+    color: #111111;
+}
+
+
+/* DESCRIPTION */
+
+.demo-tool-card p {
+    font-size: 15px;
+    line-height: 1.65;
+    color: #4b5563;
+    margin: 0 0 24px;
+}
+
+
+/* BUTTON */
+
+.demo-tool-button {
+    margin-top: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 9px 16px;
+    border-radius: 6px;
+    background: #ff7062;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.demo-tool-button:hover {
+    background: #f35f52;
+    transform: translateY(-1px);
+}

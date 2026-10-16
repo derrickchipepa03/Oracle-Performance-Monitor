@@ -1,83 +1,249 @@
-.project-card {
-    background: #fff;
-    border: 1px solid #e5e5e5;
-    border-radius: 14px;
-    padding: 28px;
+/* =========================================
+   SHARED PROJECT CARD
+   Used on Home + Projects page
+   ========================================= */
 
-    min-height: 390px;
-
+   .project-card {
     display: flex;
     flex-direction: column;
 
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    min-width: 0;
+    height: 100%;
+
+    padding: 0;
+    overflow: hidden;
+
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 14px;
+
+    color: #131313;
+    cursor: pointer;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
 }
 
 .project-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    transform: translateY(-5px);
+    box-shadow: 0 16px 35px rgba(0, 0, 0, 0.08);
 }
+
+
+/* =========================================
+   IMAGE
+   ========================================= */
+
+.project-card__image {
+    width: 100%;
+    height: 210px;
+
+    flex-shrink: 0;
+    overflow: hidden;
+
+    background: #eeeeee;
+}
+
+.project-card__image img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    transition: transform 0.35s ease;
+}
+
+.project-card:hover .project-card__image img {
+    transform: scale(1.025);
+}
+
+
+/* =========================================
+   CARD CONTENT
+   ========================================= */
+
+   .project-card__content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    width: 100%;
+    padding: 20px;
+}
+
+
+/* =========================================
+   TOP ROW - ICON + STATUS
+   ========================================= */
+
+.project-card__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    margin-bottom: 14px;
+}
+
+.project-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+    margin: 0;
+}
+
+.project-card__status {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    width: fit-content;
+    padding: 6px 14px;
+
+    background: #fff7e6;
+    border: 1px solid #f3dfae;
+    border-radius: 20px;
+
+    color: #8a6517;
+
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+
+.status-dot {
+    display: block;
+
+    width: 7px;
+    height: 7px;
+
+    flex-shrink: 0;
+
+    background: #e6a817;
+    border-radius: 50%;
+}
+
+
+/* =========================================
+   TITLE
+   ========================================= */
+
+.project-card__content h3 {
+    margin: 0 0 10px;
+
+    color: #171717;
+
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 1.3;
+
+    /* reserve space for up to 2 title lines */
+    min-height: 46px;
+}
+
+
+/* =========================================
+   DESCRIPTION
+   ========================================= */
+
+.project-description {
+    margin: 0;
+
+    color: #555555;
+
+    line-height: 1.6;
+
+    /* reserve equal space on every card */
+    min-height: 104px;
+}
+
+
+/* =========================================
+   TECHNOLOGIES
+   ========================================= */
 
 .project-technologies {
     display: flex;
     flex-wrap: wrap;
+    align-items: flex-start;
+
     gap: 8px;
-    margin-top: 18px;
-    margin-bottom: 29px;
+
+    margin-top: 20px;
+    min-height: 32px;
 }
 
-.technology-tag {
+.project-technologies span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    flex: 0 0 auto;
+
+    padding: 5px 10px;
+
     background: #f3f3f3;
     border-radius: 20px;
-    padding: 6px 10px;
+
     font-size: 0.8rem;
 }
 
-.project-button {
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+.project-card__footer {
+    width: 100%;
+
+    /* pushes the button to the bottom */
     margin-top: auto;
 
-    width: fit-content;
-    padding: 10px 120px;
+    padding-top: 24px;
+}
+
+
+/* =========================================
+   BUTTON
+   ========================================= */
+
+.project-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+
+    margin: 0;
+    padding: 11px 16px;
 
     border: none;
-    border-radius: 6px;
+    border-radius: 7px;
 
     background: #ff7062;
-    color: white;
+    color: #ffffff;
 
+    font-family: inherit;
+    font-size: 0.9rem;
     font-weight: 600;
+
+    white-space: nowrap;
+
     cursor: pointer;
-    position: relative;
-    left:10px;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
 }
 
-#projects-grid .project-card__content {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    width: 100%;
-}
-
-#projects-grid .project-technologies {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-top: auto;
-    padding-top: 30px;
-    width: 100%;
-}
-
-#projects-grid .project-technologies span {
-    width: auto;
-    flex: 0 0 auto;
-}
-
-#projects-grid .project-card__footer {
-    width: 100%;
-    margin-top: 24px;
-}
-
-#projects-grid .project-button {
-    display: block;
-    width: 100%;
-    margin: 0;
+.project-button:hover {
+    background: #f45f52;
+    transform: translateY(-2px);
 }
