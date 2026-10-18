@@ -2,7 +2,7 @@
 
 --- Introduction ---
 
-The operational monitoring automation platform is a sql based project that aims to solve a real world problem database issues easier to solve through automation. Through the process of initally manually creating sql scripts that find these databse issues e.g. slow sql queries/ plsql queries, low fra/oradata space for backups, high cpu usage, library cache contention, row cache contention. These problems can be solved by sql scripts that search for these issues within a database.
+The operational intelligence monitoring automation platform is a automation based project that aims to solve a real world problems by making manual issues easier to solve through automation. Through the process of initally manually creating sql scripts that find these databse issues e.g. slow sql queries/ plsql queries, low fra/oradata space for backups, high cpu usage, library cache contention, row cache contention. These problems can be solved by sql scripts that search for these issues within a database.
 
 --- Project Aim ---
 
@@ -279,7 +279,8 @@ Measure:
 - number of detected incidents
 - DBA effort reduction
 
---- Database design ---
+--- Automation design ---
+
 
 
 
@@ -297,6 +298,10 @@ Measure:
 
 
 --- Data generation ---
+
+
+
+
 
 
 

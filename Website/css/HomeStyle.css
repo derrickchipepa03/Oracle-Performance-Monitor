@@ -810,7 +810,7 @@ main {
     color: white;
     border: 1px solid black;
     position: relative;
-    bottom: 0px;
+    bottom: -10px;
 }
 
 .link1:hover {
@@ -1053,7 +1053,7 @@ main {
 
 /* tools */
 .tools {
-    padding: 25px 0;
+    padding: 25px 0 50px;
      background:
         radial-gradient(
             circle at 5% 30%,
@@ -1120,6 +1120,8 @@ main {
         transform 0.2s ease,
         background 0.2s ease,
         box-shadow 0.2s ease;
+    position:relative;
+    bottom:-20px;
 }
 
 .about-button--primary {
