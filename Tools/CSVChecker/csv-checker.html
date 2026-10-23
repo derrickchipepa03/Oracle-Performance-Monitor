@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+    <title>CSV Data Checker</title>
+    <link rel="stylesheet" href="../css/csv-checker.css">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="../js/csv-checker.js" defer></script>
+</head>
+
+<body>
+    <main class="csv-checker">
+        <header class="csv-checker__header">
+            <div class="csv-checker__title">
+                <div class="csv-checker__icon">
+                    <i data-lucide="file-spreadsheet"></i>
+                </div>>
+
+                <div>
+                    <h1>CSV Data Checker</h1>
+                    <p>Upload, inspect and validate your CSV files.</p>
+                </div>
+            </div>
+        </header>
+
+        <section class="csv-upload">
+            <div class="csv-upload__area" id="csvDropZone">
+                <i data-lucide="cloud-upload"></i>
+                <h2>Upload your CSV file</h2>
+
+                <p>
+                    Drag and drop a CSV file here or brose your computer.
+                </p>
+
+                <label for="csvFIleInput" class="csv-upload__button">
+                    Brose Files
+                </label>
+
+                <input
+                    type="file"
+                    id="csvFileInput"
+                    accept=".csv,text/csv"
+                    hidden
+                >
+            </div>
+
+            <p id="csvFileName"></p>
+        </section>
+
+        <section class="csv-overview">
+
+            <div class="csv-section-heading">
+                <h2>Data Overview</h2>
+                <p>A summary of your uploaded dataset.</p>
+            </div>
+
+            <div class="csv-stats">
+
+                <article class="">
+                    <span></span>
+                    <h3></h3>
+                </article>
+            </div>
+        </section>
+    </main>
+</body>
